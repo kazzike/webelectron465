@@ -6,12 +6,7 @@ jQuery(function($) {
 		
         $(document).ready( function() {
 
-            // load google map
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&' +
-            'callback=initialize';
-        document.body.appendChild(script);
+       
 
         top_menu_height = $('.templatemo-top-menu').height();
         // scroll spy to auto active the nav item
@@ -53,24 +48,10 @@ jQuery(function($) {
             $(linkClass).fadeIn();  
         });
 
-        //gallery light box setup
-        $('a.colorbox').colorbox({
-                                    rel: function(){
-                                        return $(this).data('group');
-
-                                    }
-        });
     });
 });
 
-function initialize() {
-    var mapOptions = {
-      zoom: 12,
-      center: new google.maps.LatLng(16.8451789,96.1439764)
-    };
 
-    var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
-}
 
 // scroll animation 
 function scrollTo(selectors)
