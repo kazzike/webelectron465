@@ -60,7 +60,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                                 </button>
-                                <a href="#" class="navbar-brand"><img src="images/templatemo_logo.png" alt="" title="" /></a>
+                                <a href="index.html" class="navbar-brand"><img src="images/logoe.png" alt="Electrón 465" title="Electrón 465" /></a>
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
@@ -104,26 +104,26 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 
                        <div class="row">
-						 <form class="" action="#">
+						 <form method="POST" action="enviarcorreo.php">
                             <div class="form-group col-md-4">
 								<select class="selete" name="naci" id="naci" style="width: 100%;">
 									<option selected>Documento Identidad</option>
-                                    <option value="V">Venezolano</option>
-									<option value="E">Extranjero</option>
-									<option value="">R.I.F.</option>
+                                    <option>Venezolano</option>
+									<option>Extranjero</option>
+									<option>R.I.F.</option>
 								</select>
 						    </div>
 
 
                       <div class="form-group col-md-4">
-                                <input type="" class="form-control" placeholder="Tu Cédula o Rif..." maxlength="40" />
+                                <input name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." maxlength="40" />
                       </div>
                       <div class="form-group col-md-4">
                                 <select class="selete" name="gene" id="gene" style="width: 100%;">
                                     <option selected>Tu Género</option>
-                                    <option value="">Masculino</option>
-                                    <option value="">Femenino</option>
-                                    <option value="">Otro</option>
+                                    <option>Masculino</option>
+                                    <option>Femenino</option>
+                                    <option>Otro</option>
                                 </select>
                       </div> 
                       </div> 
@@ -193,8 +193,8 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                     <div class="form-group col-md-4">
                         <select class="selete" name="wazz" id="wazz" style="width: 100%;">
                             <option selected>¿Usas Whatsapp?</option>
-                            <option value="">Si</option>
-                            <option value="">No</option>
+                            <option>Si</option>
+                            <option>No</option>
                         </select>
                      </div>  
                   
@@ -203,8 +203,8 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                             <div class="form-group col-md-6">
                                 <select class="selete" name="tnom" id="tnom" style="width: 100%;">
                                     <option selected>Tu Tipo de Nomina</option>
-                                    <option value="">Personal</option>
-                                    <option value="">Empresa</option>
+                                    <option>Personal</option>
+                                    <option>Empresa</option>
                                 </select>
                             </div>  
                      
@@ -262,7 +262,9 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                     </div>
 
                     <!-- MOTOS-->
-                    <div class="row">
+                    <?php
+if($_GET['metodo'] =='moto'){
+echo '     <div class="row">
                         <div class="form-group col-md-6">
                                 <select class="selete" name="tmot" id="tmot" style="width: 100%;">
                                     <option selected>Tipo de Moto</option>
@@ -277,35 +279,68 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                     <option value="">Sincronica</option>
                                 </select>
                             </div> 
-                    </div>
+                    </div>'; 
 
-                    <div class="row">
+ 
+}
+else {
+	echo '<input type=hidden name="tmot" value=""><input name="cvel" type="hidden" value="">';
+}
+?>
+
+<?php
+if($_GET['metodo'] =='libre'){
+echo '       <div class="row">
                         <div class="form-group col-md-12">
                                 <select class="selete" name="mont" id="mont" style="width: 100%;">
                                     <option selected>Monto a Solicitar</option>
-                                    <option value="">5.000 Bs.</option>
-                                    <option value="">10.000 Bs.</option> 
-                                    <option value="">15.000 Bs.</option>
-                                    <option value="">20.000 Bs.</option>
-                                    <option value="">25.000 Bs.</option> 
-                                    <option value="">30.000 Bs.</option>
+                                    <option>5.000 Bs.</option>
+                                    <option>10.000 Bs.</option> 
+                                    <option>15.000 Bs.</option>
+                                    <option>20.000 Bs.</option>
+                                    <option>25.000 Bs.</option> 
+                                    <option>30.000 Bs.</option>
                                 </select>
                             </div> 
-                    </div>
+                    </div>  '; 
 
-                        <div class="row">
+ 
+}
+else {
+	echo '<input type=hidden name="mont" value="">';
+}
+?>
+
+<?php
+if($_GET['metodo'] =='articulo'){
+echo ' <div class="row">
                         <div class="form-group col-md-12">
                                 <select class="selete" name="arti" id="arti" style="width: 100%;">
                                     <option selected>¿Que Articulo deseas solicitar?</option>
-                                    <option value="">Celular</option>
-                                    <option value="">Laptop</option>
-                                    <option value="">Nevera</option>
-                                    <option value="">Cocina</option>
-                                    <option value="">Lavadora</option>
-                                    <option value="">Aire Acondicionado</option>
+                                    <option>Celular</option>
+                                    <option>Laptop</option>
+                                    <option>Nevera</option>
+                                    <option>Cocina</option>
+                                    <option>Lavadora</option>
+                                    <option>Aire Acondicionado</option>
                                 </select>
                             </div> 
-                    </div>
+                    </div>'; 
+
+ 
+}
+else {
+	echo '<input type=hidden name="arti" value="">';
+}
+?>
+
+
+
+               
+
+               
+
+                        
 
                 <div class="row">
                     <div class="form-group col-md-12">
