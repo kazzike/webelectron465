@@ -1,17 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>Electrón 465</title>
         <meta name="keywords" content="" />
 		<meta name="description" content="" />
-<!-- 
-Urbanic Template 
-http://www.templatemo.com/preview/templatemo_395_urbanic 
--->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--<link rel="shortcut icon" href="PUT YOUR FAVICON HERE">-->
-
         <!--Google UI CSS 
         <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons.css">-->
         <!-- Google Web Font Embed -->
@@ -29,21 +23,19 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-        <!--HOLA JUD-->
     </head>
     
-    <body>
 
-        <div class="templatemo-top-bar" id="templatemo-top">
-            <div class="container">
-                <div class="subheader">
-                    <div id="phone" class="pull-left">
-                            <img src="images/phone.png" alt="phone"/>
-                            0274-2510160
-                    </div>
-                    <div id="email" class="pull-right">
-                            <img src="images/email.png" alt="email"/>
-                            contacto@electron465.com
+
+    <body>
+       <div class="templatemo-top-bar" id="templatemo-top">
+        <div class="container">
+         <div class="subheader">
+              <div id="phone" class="pull-left">
+                   <img src="images/phone.png" alt="phone"/>0274-2512260
+              </div>
+              <div id="email" class="pull-right">
+                   <img src="images/email.png" alt="email"/>electron465empresa@gmail.com
                     </div>
                 </div>
             </div>
@@ -116,7 +108,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
 
 
                       <div class="form-group col-md-4">
-                                <input name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." maxlength="40" />
+                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." maxlength="40" />
                       </div>
                       <div class="form-group col-md-4">
                                 <select class="selete" name="gene" id="gene" style="width: 100%;">
@@ -129,7 +121,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                       </div> 
                       <div class="row">
                             <div class="form-group col-md-6">
-                                    <input name="pnom" id="pnom" type="" class="form-control" placeholder="Tu Primer Nombre..." maxlength="40" />
+                                    <input required="required" name="pnom" id="pnom" type="" class="form-control" placeholder="Tu Primer Nombre..." maxlength="40" />
                           </div>    
                            <div class="form-group col-md-6">
                                     <input name="snom" id="snom" type="" class="form-control" placeholder="Tu Segundo Nombre..." maxlength="40" />
@@ -138,7 +130,7 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                       <div class="row">
 
                              <div class="form-group col-md-6">
-                                    <input name="pape" id="pape" type="" class="form-control" placeholder="Tu Primer Apellido..." maxlength="40" />
+                                    <input required="required"name="pape" id="pape" type="" class="form-control" placeholder="Tu Primer Apellido..." maxlength="40" />
                           </div>    
                            <div class="form-group col-md-6">
                                     <input name="sape" id="sape" type="" class="form-control" placeholder="Tu Segundo Apellido..." maxlength="40" />
@@ -146,10 +138,10 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                       </div>
                       <div class="row">
                           <div class="form-group col-md-12">
-                                    <input name="dire" id="dire" type="" class="form-control" placeholder="¿Donde Vives?... (Tu Dirección)" maxlength="40" />
+                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Donde Vives?... (Tu Dirección)" maxlength="40" />
                           </div>
                             <div class="form-group col-md-4">
-                                    <select class="selete" name="esta" id="esta" style="width: 100%;">
+                                    <select required aria-required="true"  class="selete" name="esta" id="esta" style="width: 100%;">
                                         <option selected>Selecciona tu Estado</option>
                                         <option value="Amazonas">Amazonas</option>
                                         <option value="Apure">Apure</option>
@@ -177,18 +169,18 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                                     </select>
                           </div>  
                            <div class="form-group col-md-4">
-                                    <input name="ciud" id="ciud" type="" class="form-control" placeholder="¿En que Ciudad Vives?..." maxlength="40" />
+                                    <input required="required" name="ciud" id="ciud" type="" class="form-control" placeholder="¿En que Ciudad Vives?..." maxlength="40" />
                           </div>
                           <div class="form-group col-md-4">
-                                    <input name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="40" />
+                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="40" />
                           </div>
                     </div>
                     <div class="row">
                       <div class="form-group col-md-4">
-                        <input name="ncas" id="ncas" type="" class="form-control" placeholder="Tú número de teléfono (de casa)..." maxlength="40" />
+                        <input required="required" name="ncas" id="ncas" type="" class="form-control" placeholder="Tú número de teléfono (de casa)..." maxlength="40" />
                       </div>
                       <div class="form-group col-md-4">
-                        <input name="ncel" id="ncel" type="" class="form-control" placeholder="Tú número de celular..." maxlength="40" />
+                        <input required="required" name="ncel" id="ncel" type="" class="form-control" placeholder="Tú número de celular..." maxlength="40" />
                       </div>
                     <div class="form-group col-md-4">
                         <select class="selete" name="wazz" id="wazz" style="width: 100%;">
@@ -210,12 +202,12 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                      
                    
                             <div class="form-group col-md-6">
-                            <input name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="40" />
+                            <input required="required" name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="40" />
                             </div>  
                      </div>
                      <div class="row">
                             <div class="form-group col-md-12">
-                            <input name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="40" />
+                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="40" />
                             </div>  
                      </div>
                      <div class="row">
@@ -243,10 +235,10 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <input name="mvac" id="mvac" type="" class="form-control" placeholder="¿Monto estimado a recibir en vacaciones?..." maxlength="40" />
+                            <input required="required" name="mvac" id="mvac" type="" class="form-control" placeholder="¿Monto estimado a recibir en vacaciones?..." maxlength="40" />
                         </div>  
                           <div class="form-group col-md-4">
-                            <input name="magu" id="magu" type="" class="form-control" placeholder="¿Monto estimado a recibir en Aguinaldos?..." maxlength="40" />
+                            <input required="required" name="magu" id="magu" type="" class="form-control" placeholder="¿Monto estimado a recibir en Aguinaldos?..." maxlength="40" />
                         </div>
                         </div>
                     <div class="row">
@@ -254,29 +246,31 @@ http://www.templatemo.com/preview/templatemo_395_urbanic
                             <input name="bbms" id="bbms" type="" class="form-control" placeholder="Tu PIN de BBMSN..." maxlength="40" />
                         </div>
                          <div class="form-group col-md-4">
-                            <input name="twit" id="twit" type="" class="form-control" placeholder="Tu Usuario de Twitter..." maxlength="40" />
+                            <input  name="twit" id="twit" type="" class="form-control" placeholder="Tu Usuario de Twitter..." maxlength="40" />
                         </div>
                          <div class="form-group col-md-4">
-                            <input name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
+                            <input  name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
                         </div>
                     </div>
 
                     <!-- MOTOS-->
                     <?php
+                    echo '<input type=hidden name="modelo" value="'. $_GET ['metodo'] . '">';
+                    
 if($_GET['metodo'] =='moto'){
 echo '     <div class="row">
                         <div class="form-group col-md-6">
                                 <select class="selete" name="tmot" id="tmot" style="width: 100%;">
                                     <option selected>Tipo de Moto</option>
-                                    <option value="">Moto Nueva</option>
-                                    <option value="">Moto Usada</option>
+                                    <option>Moto Nueva</option>
+                                    <option>Moto Usada</option>
                                 </select>
                             </div> 
                                <div class="form-group col-md-6">
                                 <select class="selete" name="cvel" id="cvel" style="width: 100%;">
                                     <option selected>Caja de Velocidades</option>
-                                    <option value="">Automatica</option>
-                                    <option value="">Sincronica</option>
+                                    <option>Automatica</option>
+                                    <option>Sincronica</option>
                                 </select>
                             </div> 
                     </div>'; 
@@ -335,13 +329,6 @@ else {
 ?>
 
 
-
-               
-
-               
-
-                        
-
                 <div class="row">
                     <div class="form-group col-md-12">
                      <button name="btnenvi" id="btnenvi" type="submit" class="btn btn-orange pull-right">ENVIAR</button>
@@ -374,11 +361,7 @@ else {
 
                         <div class="footer_container">
                             <ul class="list-inline">
-                                <li>
-                                    <a href="#">
-                                        <span class="social-icon-fb"></span>
-                                    </a>
-                                </li>
+                          
                                 <li>
                                     <a href="#" title="0424 - 7436422">
                                         <span class="social-icon-rss"></span>
