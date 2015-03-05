@@ -1,3 +1,15 @@
+<html lang="es">
+    <head>
+        <title>Electrón 465</title>
+     		
+        <meta charset="UTF-8">
+       <link href="css/bootstrap.css" rel='stylesheet' type='text/css'>
+       <link href="css/templatemo_style.css"  rel='stylesheet' type='text/css'>
+        </head>
+        <body>
+
+
+
 <?php
 if (isset ( $_POST ['cedu'] )) {
 	
@@ -27,6 +39,15 @@ if (isset ( $_POST ['cedu'] )) {
 	$cajavelocidades = $_POST ['cvel'];
 	$monto = $_POST ['mont'];
 	$articulo = $_POST ['arti'];
+	$modelo = $_POST ['modelo'];
+	if ($modelo == 'moto'){
+		$asunto = 'Solicitud por: (' . $tipodemoto . ' ' . $cajavelocidades . ')';
+	}elseif ($modelo =='articulo'){
+		$asunto = 'Solicitud por: (' . $articulo . ' )';
+	}else {
+		$asunto = 'Solicitud por: (' . $monto . ' )';
+	}
+	
 	$tabla = '<table>
 			<tr><td>Nacionalidad:</td><td>' . $nacionalidad . '</td></tr>
 			<tr><td>Cédula:</td><td>' . $cedula . '</td></tr>
@@ -56,14 +77,24 @@ if (isset ( $_POST ['cedu'] )) {
 			</table>';
 	
 	$to = 'electron465empresa@gmail.com';
-	$subject = 'Solicitud por Internet';
+	$subject = $asunto;
 	$headers = "MIME-Version: 1.0" . "\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	$headers .= 'From: <' . $correo . '>' . "\r\n";
 	$headers .= 'Cc: electronbackup@gmail.com' . "\r\n";
 	mail ( $to, $subject, $tabla, $headers );
 	
-	echo '<br><br><center><H1>Su mensaje ha sido enviado, nos comunicaremos con Usted a la brevedad. Muchas Gracias</H1><br><br><a href="index.html">Regresar a la Página Principal</a></center>';
+	echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
+		<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
+	
+	
+	
+	
+	
 } else {
 	header ( 'Location: index.html' );
 }
+
+?>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <title>Electrón 465</title>
         <meta name="keywords" content="Financiamiento nomina ministerio" />
@@ -127,10 +127,10 @@
                     <div class="col-md-3">
                         <div class="templatemo-service-item" >
                             <div>
-                                <img src="images/mobile.png" alt="icon"/><br>
-                                <span class="templatemo-service-item-header">MOTOS </span>
+                                <img src="images/mobile.png" alt="icon"/>
+                                <span class="templatemo-service-item-header">MOTOCICLETAS</span>
                             </div>
-							<p>Financiamiento para adquirir todo tipo de motos, actualmente disponible para cualquier marca, así podrás acceder a la que desees.</p><br>
+							<p>Financiamiento para adquirir todo tipo de motos, modelos nuevos y usados disponible para cualquier marca, así podrás acceder a la que desees.</p><br>
                             <div class="text-center">
                                 <a href="solicitud.php?metodo=moto" 
                                 	class="templatemo-btn-read-more btn btn-orange">REALIZAR SOLICITUD</a>
@@ -149,7 +149,7 @@
                             <p>Si eres cliente de la familia Electrón y deseas conocer mas acerca de los créditos que ya posees, solicita tu estado de cuenta a través de este apartado.</p><br>
                             <div class="text-center">
                                 <a href="#" 
-                                	class="templatemo-btn-read-more btn btn-orange">REALIZAR SOLICITUD</a>
+                                	class="templatemo-btn-read-more btn btn-orange">PROXIMAMENTE...</a>
                             </div>
                             <br class="clearfix"/>
                         </div>
@@ -172,10 +172,10 @@
                 </div>
                 
                 <div class="blog_box">
-                    <div class="col-sm-5 col-md-6 blog_post">
+                    <div class="col-sm-6 col-md-6">
                         <ul class="list-inline">
                             
-                            <li  class="col-md-8">
+                            <li  class="col-md-12">
                                 <div class="pull-left">
                                     <span class="blog_header">Quienes Somos</span><br/>
                                     
@@ -189,10 +189,10 @@
                         </ul>
                     </div> <!-- /.blog_post 1 -->
                     
-                    <div class="col-sm-5 col-md-6 blog_post">
+                    <div class="col-sm-6 col-md-6">
                         <ul class="list-inline">
                          
-                            <li class="col-md-8">
+                            <li class="col-md-12">
                                 <div class="pull-left">
                                     <span class="blog_header">Servicios Financieros Innovadores</span><br/>                                    
                                 </div>
@@ -208,26 +208,26 @@ Somos una Organización de servicios financieros dedicada a conocer las necesida
                     
                     <div class="templatemo_clear"></div>
                     
-                    <div class="col-sm-5 col-md-6 blog_post">
+                    <div class="col-sm-6 col-md-6 blog_post">
                         <ul class="list-inline">
                             
-                            <li class="col-md-8">
+                            <li class="col-md-12">
                                 <div class="pull-left">
                                     <span class="blog_header">Eficiencia con Sentido Humano</span><br/>
                                 </div>
                              
                                 <div class="clearfix"> 
                                 </div>
-                                <p class="blog_text">Ser para nuestros clientes la opción más importante como proveedor de servicios de financiamiento de gran calidad en el país.  
+                                <p class="blog_text">Nuestra Misión es ser para nuestros clientes la opción más importante como proveedor de servicios de financiamiento de gran calidad en el país.  
                                 </p>
                             </li>
                         </ul>	
                     </div><!-- /.blog_post 3 -->
                     
-                    <div class="col-sm-5 col-md-6 blog_post">
+                    <div class="col-sm-6 col-md-6 blog_post">
                         <ul class="list-inline">
                          
-                            <li class="col-md-8">
+                            <li class="col-md-12">
                                 <div class="pull-left">
                                     <span class="blog_header">Responsabilidad, Calidad, Respeto</span><br/>
                                 </div>
@@ -266,16 +266,17 @@ Compromiso con una sólida ética laboral, integridad y honestidad, así como co
                         
                         <p><img src="images/location.png" alt="icon 1" /> Sector Paseo de La Feria, C.C. La Sevillana P.B.</p>
                         <p><img src="images/phone1.png"  alt="icon 2" /> 0274-2512260</p>
-                        <p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="#"><span class="txt_orange">www.electron465.com</span></a></p>
-                        <form class="form-horizontal" action="#">
+                        <p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="www.electron465.com"><span class="txt_orange">www.electron465.com</span></a></p>
+                        
+                        <form class="form-horizontal" method="post" action="enviarcontactenos.php">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Tu Nombre..." maxlength="40" />
+                                <input name="name" required="required" class="form-control" placeholder="Tu Nombre..." maxlength="40" />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Tu Correo..." maxlength="40" />
+                                <input name="email" required="required" type="email" class="form-control" placeholder="Tu Correo..." maxlength="40" />
                             </div>
                             <div class="form-group">
-                                <textarea  class="form-control" style="height: 130px;" placeholder="Escribe tu mensaje..."></textarea>
+                                <textarea name="message" required="required" maxlength="150" class="form-control" style="height: 130px;" placeholder="Escribe tu mensaje..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-orange pull-right">ENVIAR</button>
                         </form>
