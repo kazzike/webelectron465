@@ -207,26 +207,17 @@ $error = null;
                   
                      </div> 
                      <div class="row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-4">
                                 <select class="selete" name="tnom" id="tnom" style="width: 100%;">
                                     <option selected>Tu Tipo de Nomina</option>
-                                    <option>Personal</option>
-                                    <option>Empresa</option>
+                                    <option>Pública</option>
+                                    <option>Privada</option>
                                 </select>
                             </div>  
-                     
-                   
-                            <div class="form-group col-md-6">
+                              <div class="form-group col-md-4">
                             <input required="required" name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="40" />
                             </div>  
-                     </div>
-                     <div class="row">
-                            <div class="form-group col-md-12">
-                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="40" />
-                            </div>  
-                     </div>
-                     <div class="row">
-                        <div class="form-group col-md-4">
+                    <div class="form-group col-md-4">
                             <select class="selete" name="banc" id="banc" style="width: 100%;">
                                 <option selected>Banco donde pagan tu nomina...</option>
                                 <option>BICENTENARIO</option>
@@ -248,7 +239,19 @@ $error = null;
                                 <option>MERCANTIL</option>
                                 <option>NINGUNA DE LAS ANTERIORES</option>                                                                    
                             </select>
-                        </div>
+                        </div>  
+                     </div>
+                     <div class="row">
+                            <div class="form-group col-md-12">
+                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="40" />
+                            </div>  
+                     </div>
+                     <div class="row">
+
+ <div class="form-group col-md-4">
+                            <input required="required" name="suel" id="suel" type="" class="form-control" placeholder="Sueldo Promedio Mensual..." maxlength="40" />
+                            </div>
+                       
                         <div class="form-group col-md-4">
                             <input required="required" name="mvac" id="mvac" type="" class="form-control" placeholder="¿Monto estimado a recibir en vacaciones?..." maxlength="40" />
                         </div>  
