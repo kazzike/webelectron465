@@ -1,3 +1,18 @@
+<?php 
+
+
+require_once 'recaptchalib.php';
+
+
+// Register API keys at https://www.google.com/recaptcha/admin
+$publickey = "6Lc4EgMTAAAAAFe1JflPGIDYjkMeRXOJKjiiTOsi";
+
+# the error code from reCAPTCHA, if any
+$error = null;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -328,6 +343,13 @@ else {
 }
 ?>
 
+
+				<div class="row">
+                    <div class="form-group col-md-12">
+						<?php echo recaptcha_get_html($publickey, $error);?>                		    
+                     
+                    </div>                                
+                </div>
 
                 <div class="row">
                     <div class="form-group col-md-12">
