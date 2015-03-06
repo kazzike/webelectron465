@@ -34,6 +34,7 @@ if (isset ( $_POST ['cedu'] )) {
 			$empresa = $_POST ['empr'];
 			$direcciondelaempresa = $_POST ['demp'];
 			$banco = $_POST ['banc'];
+			$sueldopromedio = $_POST ['suel'];
 			$montovacaciones = $_POST ['mvac'];
 			$montoaguinaldos = $_POST ['magu'];
 			$bbmsn = $_POST ['bbms'];
@@ -69,6 +70,7 @@ if (isset ( $_POST ['cedu'] )) {
 			<tr><td>Empresa donde Labora:</td><td>' . $empresa . '</td></tr>
 			<tr><td>Dirección de la Empresa:</td><td>' . $direcciondelaempresa . '</td></tr>
 			<tr><td>Banco por el que cobra:</td><td>' . $banco . '</td></tr>
+			<tr><td>Sueldo Promedio Mensual:</td><td>' . $sueldopromedio . '</td></tr>
 			<tr><td>Monto a Cobrar en Vacaciones:</td><td>' . $montovacaciones . '</td></tr>
 			<tr><td>Monto a Cobrar en Aguinaldos:</td><td>' . $montoaguinaldos . '</td></tr>
 			<tr><td>Pin de Blackberry:</td><td>' . $bbmsn . '</td></tr>
