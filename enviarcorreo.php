@@ -14,8 +14,6 @@
 if (isset ( $_POST ['cedu'] )) {
 	$privatekey = "6Lc4EgMTAAAAANZiORAMganplKlZdreerMw1XIBN";
 	
-	
-		if ($resp->is_valid) {			
 			$nacionalidad = $_POST ['naci'];
 			$cedula = $_POST ['cedu'];
 			$genero = $_POST ['gene'];
@@ -39,6 +37,8 @@ if (isset ( $_POST ['cedu'] )) {
 			$montoaguinaldos = $_POST ['magu'];
 			$bbmsn = $_POST ['bbms'];
 			$twitter = $_POST ['twit'];
+			$facebook = $_POST ['face'];
+			$codigovendedor = $_POST ['cove'];
 			$tipodemoto = $_POST ['tmot'];
 			$cajavelocidades = $_POST ['cvel'];
 			$monto = $_POST ['mont'];
@@ -53,6 +53,7 @@ if (isset ( $_POST ['cedu'] )) {
 			}
 			
 			$tabla = '<table>
+			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>
 			<tr><td>Nacionalidad:</td><td>' . $nacionalidad . '</td></tr>
 			<tr><td>Cédula:</td><td>' . $cedula . '</td></tr>
 			<tr><td>Género:</td><td>' . $genero . '</td></tr>
@@ -75,12 +76,22 @@ if (isset ( $_POST ['cedu'] )) {
 			<tr><td>Monto a Cobrar en Aguinaldos:</td><td>' . $montoaguinaldos . '</td></tr>
 			<tr><td>Pin de Blackberry:</td><td>' . $bbmsn . '</td></tr>
 			<tr><td>Usuario de Twitter:</td><td>' . $twitter . '</td></tr>
+			<tr><td>Usuario de Facebook:</td><td>' . $facebook . '</td></tr>
 			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>
 			<tr><td>Caja de Velocidades:</td><td>' . $cajavelocidades . '</td></tr>
 			<tr><td>Monto Solicitado:</td><td>' . $monto . '</td></tr>
 			<tr><td>Artículo:</td><td>' . $articulo . '</td></tr>
 			</table>';
 			
+			
+			$insertar = "insert into solicitud (codigovendedor, nacionalidad, cedula, genero, pnombre, snombre, papellido, sapellido, direccionh, estado, correo, telefonocasa, numerocelular, whatsapp, nomina, empresa, direccionempresa, banco, sueldopromedio, vacaciones, aguinaldos, twitter, facebook, tipomoto, cajavelocidades, montosolicitado, articulo) values ('".$codigovendedor."','".$nacionalidad."','".$cedula."','".$genero."','".$primernombre."','".$segundonombre."','".$primerapellido."','".$segundoapellido."', '".$direccion."', '".$estado."', '".$correo."', '".$numerodecasa."','".$numerocelular."', '".$whatsapp."', '".$nomina."', '".$empresa."', '".$direcciondelaempresa."', '".$banco."', '".$sueldopromedio."', '".$montovacaciones."','".$bbmsn."', '".$twitter."', '".$facebook."', '".$tipodemoto."', '".$cajavelocidades."', '".$monto."', '".$articulo."')";
+			
+			$conexion=mysql_connect('localhost', 'root', 'za63qj2p');
+			if ( !$conexion ) {echo 'no se pudo conectar';}
+			mysql_select_db('webelectron', $conexion);
+			mysql_query($insertar);
+			
+		
 			$to = 'electron465empresa@gmail.com';
 			$subject = $asunto;
 			$headers = "MIME-Version: 1.0" . "\r\n";
@@ -92,11 +103,18 @@ if (isset ( $_POST ['cedu'] )) {
 			echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 		
-	}
+
 } else {
 	header ( 'Location: index.html' );
 }
 
 ?>
 </body>
+
+
+
+
+
+
+
 </html>

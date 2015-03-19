@@ -123,7 +123,7 @@ $error = null;
 
 
                       <div class="form-group col-md-4">
-                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." maxlength="40" />
+                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." />
                       </div>
                       <div class="form-group col-md-4">
                                 <select class="selete" name="gene" id="gene" style="width: 100%;">
@@ -153,7 +153,7 @@ $error = null;
                       </div>
                       <div class="row">
                           <div class="form-group col-md-12">
-                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Donde Vives?... (Tu Dirección)" maxlength="40" />
+                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Donde Vives?... (Tu Dirección)" maxlength="200" />
                           </div>
                             <div class="form-group col-md-4">
                                     <select required aria-required="true"  class="selete" name="esta" id="esta" style="width: 100%;">
@@ -184,10 +184,10 @@ $error = null;
                                     </select>
                           </div>  
                            <div class="form-group col-md-4">
-                                    <input required="required" name="ciud" id="ciud" type="" class="form-control" placeholder="¿En que Ciudad Vives?..." maxlength="40" />
+                                    <input required="required" name="ciud" id="ciud" type="" class="form-control" placeholder="¿En que Ciudad Vives?..." maxlength="80" />
                           </div>
                           <div class="form-group col-md-4">
-                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="40" />
+                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="160" />
                           </div>
                     </div>
                     <div class="row">
@@ -215,7 +215,7 @@ $error = null;
                                 </select>
                             </div>  
                               <div class="form-group col-md-4">
-                            <input required="required" name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="40" />
+                            <input required="required" name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="200" />
                             </div>  
                     <div class="form-group col-md-4">
                             <select class="selete" name="banc" id="banc" style="width: 100%;">
@@ -243,12 +243,12 @@ $error = null;
                      </div>
                      <div class="row">
                             <div class="form-group col-md-12">
-                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="40" />
+                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="200" />
                             </div>  
                      </div>
                      <div class="row">
 
- <div class="form-group col-md-4">
+							<div class="form-group col-md-4">
                             <input required="required" name="suel" id="suel" type="" class="form-control" placeholder="Sueldo Promedio Mensual..." maxlength="40" />
                             </div>
                        
@@ -260,14 +260,17 @@ $error = null;
                         </div>
                         </div>
                     <div class="row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-3">
                             <input name="bbms" id="bbms" type="" class="form-control" placeholder="Tu PIN de BBMSN..." maxlength="40" />
                         </div>
-                         <div class="form-group col-md-4">
+                         <div class="form-group col-md-3">
                             <input  name="twit" id="twit" type="" class="form-control" placeholder="Tu Usuario de Twitter..." maxlength="40" />
                         </div>
-                         <div class="form-group col-md-4">
+                         <div class="form-group col-md-3">
                             <input  name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
                         </div>
                     </div>
 
