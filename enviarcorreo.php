@@ -86,9 +86,9 @@ if (isset ( $_POST ['cedu'] )) {
 			
 			$insertar = "insert into solicitud (codigovendedor, nacionalidad, cedula, genero, pnombre, snombre, papellido, sapellido, direccionh, estado, correo, telefonocasa, numerocelular, whatsapp, nomina, empresa, direccionempresa, banco, sueldopromedio, vacaciones, aguinaldos, twitter, facebook, tipomoto, cajavelocidades, montosolicitado, articulo) values ('".$codigovendedor."','".$nacionalidad."','".$cedula."','".$genero."','".$primernombre."','".$segundonombre."','".$primerapellido."','".$segundoapellido."', '".$direccion."', '".$estado."', '".$correo."', '".$numerodecasa."','".$numerocelular."', '".$whatsapp."', '".$nomina."', '".$empresa."', '".$direcciondelaempresa."', '".$banco."', '".$sueldopromedio."', '".$montovacaciones."','".$bbmsn."', '".$twitter."', '".$facebook."', '".$tipodemoto."', '".$cajavelocidades."', '".$monto."', '".$articulo."')";
 			
-			$conexion=mysql_connect('localhost', 'root', 'za63qj2p');
+			$conexion=mysql_connect('localhost', 'electro4_webelectron', 'p13=3e8lxTTB');
 			if ( !$conexion ) {echo 'no se pudo conectar';}
-			mysql_select_db('webelectron', $conexion);
+			mysql_select_db('electro4_webelectron', $conexion);
 			mysql_query($insertar);
 			
 		
