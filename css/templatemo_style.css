@@ -752,3 +752,15 @@ ul.templatemo-project-gallery  li  a img:hover {
 
 
     }
+    
+
+    input {
+  	padding: 5px;
+  	width: 200px;
+  	max-width: 100%;
+  	font-size: 1.0em;
+
+	}
+
+
+	
