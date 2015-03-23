@@ -153,7 +153,7 @@ $error = null;
                       </div>
                       <div class="row">
                           <div class="form-group col-md-12">
-                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Donde Vives?... (Tu Dirección)" maxlength="200" />
+                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Dirección Fiscal?... (Tu Dirección como aparece en el R.I.F.)" maxlength="200" />
                           </div>
                             <div class="form-group col-md-4">
                                     <select required aria-required="true"  class="selete" name="esta" id="esta" style="width: 100%;">

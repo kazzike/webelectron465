@@ -61,7 +61,7 @@ if (isset ( $_POST ['cedu'] )) {
 			<tr><td>Segundo Nombre:</td><td>' . $segundonombre . '</td></tr>
 			<tr><td>Primer Apellido:</td><td>' . $primerapellido . '</td></tr>
 			<tr><td>Segundo Apellido:</td><td>' . $segundoapellido . '</td></tr>
-			<tr><td>Dirección Habitación:</td><td>' . $direccion . '</td></tr>
+			<tr><td>Dirección Fiscal:</td><td>' . $direccion . '</td></tr>
 			<tr><td>Estado:</td><td>' . $estado . '</td></tr>
 			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>
 			<tr><td>Número de Casa:</td><td>' . $numerodecasa . '</td></tr>
