@@ -1,24 +1,10 @@
-<?php 
-
-
-require_once 'recaptchalib.php';
-
-
-// Register API keys at https://www.google.com/recaptcha/admin
-$publickey = "6Lc4EgMTAAAAAFe1JflPGIDYjkMeRXOJKjiiTOsi";
-
-# the error code from reCAPTCHA, if any
-$error = null;
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <title>Electrón 465</title>
         <meta name="keywords" content="" />
-		<meta name="description" content="" />
+        <meta name="description" content="" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Google UI CSS 
@@ -89,7 +75,7 @@ $error = null;
                 <div class="templatemo-slogan text-center">
                     <span class="txt_darkgrey">Bienvenido a </span><span class="txt_orange">Electron 465</span>
                     <p class="txt_slogan"><i>Descubra todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
-                </div>	
+                </div>  
             </div>
         </div>
         
@@ -97,189 +83,99 @@ $error = null;
       
         
         <div>
-            <div class="container">
+<div class="container">
 
-         
-                <div class="row">
-                    <div class="templatemo-line-header head_contact">
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">REPORTE DE PAGO</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
-                        </div>
-                    </div>
-				</div>
-                  <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
+    <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
+<div class="row">
+    <form method="POST" action="enviarcorreo.php">
+</div> 
+<div class="row">
+    <div class="form-group col-md-4">
+       <input required="required" name="cedula" id="cedula" type="" class="form-control" placeholder="Tu Cédula..." maxlength="40" />
+    </div>
+    <div class="form-group col-md-4">
+      <input required="required" name="correo" id="correo" type="" class="form-control" placeholder="Tu Correo..." maxlength="40" />
+    </div>  
+    <div class="form-group col-md-4">
+      <input required="required" name="monto" id="monto" type="" class="form-control" placeholder="Monto..." maxlength="40" />
+    </div>
+</div>
 
-                      
-				<form method="POST" action="enviarreportepago.php">
-                     
-                      <div class="form-group col-md-4">
-                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Cédula o Rif..." />
-                      </div>
-                      
-                       <div class="form-group col-md-4">
-                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="Correo Electronico..." maxlength="160" />
-                          </div>
-                                            
-                      <div class="form-group col-md-4">
-                                <select class="selete" name="tpago" id="tpago" style="width: 100%;">
-                                    <option selected>Tipos de Pago</option>
-                                    <option value="Cheque">Cheque</option>
-                                    <option value="Efectivo">Efectivo</option>
-                                    <option value="Deposito">Deposito</option>
-                                    <option value="Transferencia">Transferencia</option>
-                                    <option value="Tarjeta de Debito">Tarjeta de Debito</option>
-                                	<option value="Tarjeta de Credito">Tarjeta de Credito</option>
-                                </select>
-                      </div> 
-                  
-                       
-                      
-                       <div class="form-group col-md-4">
-                                    <input required="required" name="monto" id="monto" type="" class="form-control" placeholder="Monto..." maxlength="9"/>
-                       </div>
-                       
-                         <div class="form-group col-md-4">
-                                <select class="selete" name="banco" id="banco" style="width: 100%;">
-                                    <option selected>Banco Emisor</option>
-                                    <option value="Banco Venezuela">Banco Venezuela</option>
-                                    <option value="BBVA Provincial">BBVA Provincial</option>
-                                    <option value="Mercantil">Mercantil</option>
-                                    <option value="Banesco">Banesco</option>
-                                    <option value="Industrial">Industrial</option>
-                                	<option value="Bancaribe">Bancaribe</option>
-                                	<option value="100%Banco">100%Banco</option>
-                                	<option value="Banplus">Banplus</option>
-                                	<option value="Bangente">Bangente</option>
-                                	<option value="Del Tesoro">Del Tesoro</option>
-                                	<option value="Exterior">Exterior</option>
-                                </select>
-                      </div> 
-                      
-                      <div class="form-group col-md-4">
-                                    <input required="required" name="rfbancaria" id="rfbancaria" type="" class="form-control" placeholder="Referencia Bancaria..." maxlength="9"/>
-                       </div>
-                      
-                         <div class="form-group col-md-4">
-    					 <strong>  Fecha de Operacion </strong>
-    					<input id="date" type="date">
-					 </div>
-                    
-                           <div class="form-group col-md-4">
-                                <select class="selete" name="banrecep" id="banrecep" style="width: 100%;">
-                                    <option selected>Banco Receptor</option>
-                                    <option value="Banco Venezuela">Banco Venezuela</option>
-                                    <option value="BBVA Provincial">BBVA Provincial</option>
-                                    <option value="Mercantil">Mercantil</option>
-                                    <option value="Banesco">Banesco</option>
-                                    <option value="Industrial">Industrial</option>
-                                	<option value="Bancaribe">Bancaribe</option>
-                                	<option value="100%Banco">100%Banco</option>
-                                	<option value="Banplus">Banplus</option>
-                                	<option value="Bangente">Bangente</option>
-                                	<option value="Del Tesoro">Del Tesoro</option>
-                                	<option value="Exterior">Exterior</option>
-                                </select>
-                      </div> 
-                      
-                      <div class="form-group col-md-4">
-                      <strong>Subir Archivo</strong>
-                    <input id="file-2" type="file" class="file" multiple=true data-preview-file-type="any">		  
-					      </div>    
-					                   
-                      <div class="form-group">
-                                <textarea name="message" required="required" maxlength="150" class="form-control" style="height: 130px;" placeholder="Observacion Cliente..."></textarea>
-                   
-                    <!-- MOTOS-->
-                    <?php
-                    echo '<input type=hidden name="modelo" value="'. $_GET ['metodo'] . '">';
-                    
-if($_GET['metodo'] =='moto'){
-echo '     <div class="row">
-                        <div class="form-group col-md-6">
-                                <select class="selete" name="tmot" id="tmot" style="width: 100%;">
-                                    <option selected>Tipo de Moto</option>
-                                    <option>Moto Nueva</option>
-                                    <option>Moto Usada</option>
-                                </select>
-                            </div> 
-                               <div class="form-group col-md-6">
-                                <select class="selete" name="cvel" id="cvel" style="width: 100%;">
-                                    <option selected>Caja de Velocidades</option>
-                                    <option>Automatica</option>
-                                    <option>Sincronica</option>
-                                </select>
-                            </div> 
-                    </div>'; 
+<div class="row">
+<div class="form-group col-md-4">
+    <input  name="fecha" id="fecha" type="date" class="form-control" placeholder="Fecha de Pago..." maxlength="40" />
+</div>
+<div class="form-group col-md-4">
+      <select class="selete" name="banc" id="banc" style="width: 100%;">
+            <option selected>Tipo de Pago...</option>
+            <option>Efectivo</option>
+            <option>Transferencia</option>
+            <option>Depósito</option>                                       
+        </select>
+        </div>
+<div class="form-group col-md-4">
+    <input  name="cove" id="cove" type="" class="form-control" placeholder="Número de Referencia..." maxlength="40" />
+</div>
+</div>
 
- 
-}
-else {
-	echo '<input type=hidden name="tmot" value=""><input name="cvel" type="hidden" value="">';
-}
-?>
+<div class="row">
 
-<?php
-if($_GET['metodo'] =='libre'){
-echo '       <div class="row">
-                        <div class="form-group col-md-12">
-                                <select class="selete" name="mont" id="mont" style="width: 100%;">
-                                    <option selected>Monto a Solicitar</option>
-                                    <option>5.000 Bs.</option>
-                                    <option>10.000 Bs.</option> 
-                                    <option>15.000 Bs.</option>
-                                    <option>20.000 Bs.</option>
-                                    <option>25.000 Bs.</option> 
-                                    <option>30.000 Bs.</option>
-                                </select>
-                            </div> 
-                    </div>  '; 
+<div class="form-group col-md-4">
+      <select class="selete" name="banc" id="banc" style="width: 100%;">
+        <option selected>Banco Emisor...</option>
+        <option>BICENTENARIO</option>
+                                <option>BOD</option>
+                                <option>PROVINCIAL</option>
+                                <option>VENEZUELA</option>
+                                <option>BANESCO</option> 
+                                <option>INDUSTRIAL</option>
+                                <option>CAMARA MERCANTIL</option>
+                                <option>CREDINFO</option>
+                                <option>INVERCRESA</option>
+                                <option>FONDO COMUN</option>
+                                <option>100% BANCO COMERCIAL</option>
+                                <option>DOMICILIACION POR OFICINA</option>
+                                <option>SOFITASA</option> 
+                                <option>DEL SUR</option>
+                                <option>CARONI</option>
+                                <option>CARIBE</option>
+                                <option>MERCANTIL</option>                                     
+        </select>
+</div>
+<div class="form-group col-md-4">
+      <select class="selete" name="banc" id="banc" style="width: 100%;">
+   <option selected>Banco Receptor...</option>
+    <option>BICENTENARIO</option>
+                                <option>BOD</option>
+                                <option>PROVINCIAL</option>
+                                <option>VENEZUELA</option>
+                                <option>BANESCO</option> 
+                                <option>INDUSTRIAL</option>
+                                <option>CAMARA MERCANTIL</option>
+                                <option>CREDINFO</option>
+                                <option>INVERCRESA</option>
+                                <option>FONDO COMUN</option>
+                                <option>100% BANCO COMERCIAL</option>
+                                <option>DOMICILIACION POR OFICINA</option>
+                                <option>SOFITASA</option> 
+                                <option>DEL SUR</option>
+                                <option>CARONI</option>
+                                <option>CARIBE</option>
+                                <option>MERCANTIL</option>                                    
+        </select>
+</div>
+<div class="form-group col-md-4">
+    <input value="Adjuntar Archivo" type="file"><br /><br />
+</div>
+</div>
 
- 
-}
-else {
-	echo '<input type=hidden name="mont" value="">';
-}
-?>
+<div class="row">
 
-<?php
-if($_GET['metodo'] =='articulo'){
-echo ' <div class="row">
-                        <div class="form-group col-md-12">
-                                <select class="selete" name="arti" id="arti" style="width: 100%;">
-                                    <option selected>¿Que Articulo deseas solicitar?</option>
-                                    <option>Celular</option>
-                                    <option>Laptop</option>
-                                    <option>Nevera</option>
-                                    <option>Cocina</option>
-                                    <option>Lavadora</option>
-                                    <option>Aire Acondicionado</option>
-                                </select>
-                            </div> 
-                    </div>'; 
+<div class="form-group col-md-12">
+    <button name="btnenvi" id="btnenvi" type="submit" class="btn btn-orange pull-right">ENVIAR</button>
+</div>
 
- 
-}
-else {
-	echo '<input type=hidden name="arti" value="">';
-}
-?>
-
-
-				<div class="row">
-                    <div class="form-group col-md-12">
-						<?php echo recaptcha_get_html($publickey, $error);?>                		    
-                     
-                    </div>                                
-                </div>
-
-                <div class="row">
-                    <div class="form-group col-md-12">
-                     <button name="btnenvi" id="btnenvi" type="submit" class="btn btn-orange pull-right">ENVIAR</button>
-                    </div>
-                
-                
-                </div>
+</div>
 </form>
                   
                        
@@ -312,7 +208,7 @@ else {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/grupoelectron">
+                                    <a href="#">
                                         <span class="social-icon-twitter"></span>
                                     </a>
                                 </li>
@@ -322,7 +218,7 @@ else {
                                     </a>
                                 </li> -->
                                 <li>
-                                    <a href="https://plus.google.com/+Electron465com/about" target="_blank">
+                                    <a href="#">
                                         <span class="social-icon-dribbble"></span>
                                     </a>
                                 </li>
@@ -332,7 +228,7 @@ else {
                             <div class="height30"></div>
                         </div>
                         <div class="footer_bottom_content">
-                        	Electrón 465 © 2015 
+                            Electrón 465 © 2015 
                         </div>
                         
                     </div>
@@ -345,6 +241,6 @@ else {
         <script src="js/stickUp.min.js"  type="text/javascript"></script>
         <script src="js/colorbox/jquery.colorbox-min.js"  type="text/javascript"></script>
         <script src="js/templatemo_script.js"  type="text/javascript"></script>
-		<!-- templatemo 395 urbanic -->
+        <!-- templatemo 395 urbanic -->
     </body>
 </html>
