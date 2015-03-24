@@ -99,97 +99,29 @@ $error = null;
         <div>
             <div class="container">
 
-         
+
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">REPORTE DE PAGO</span>
+                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">SOLICITUD DE ESTADO DE CUENTA</span>
                             <hr class="team_hr team_hr_right hr_gray"/>
                         </div>
                     </div>
 				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
-
-                      
-				<form method="POST" action="enviarreportepago.php">
-                     
-                      <div class="form-group col-md-4">
-                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Cédula o Rif..." />
+				 <strong><p align="justify">Antes de Ingresar Verifique que el CORREO este Validado por la Empresa si no comuniquese con nosotros 0274 251 22 60.</p> <p>&nbsp;</p></strong> 
+                       
+						 <form method="POST" action="enviarcorreo.php">
+                           
+                      <div class="form-group col-md-6">
+                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Ingrese Cédula o Rif..." />
                       </div>
-                      
-                       <div class="form-group col-md-4">
-                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="Correo Electronico..." maxlength="160" />
-                          </div>
-                                            
-                      <div class="form-group col-md-4">
-                                <select class="selete" name="tpago" id="tpago" style="width: 100%;">
-                                    <option selected>Tipos de Pago</option>
-                                    <option value="Cheque">Cheque</option>
-                                    <option value="Efectivo">Efectivo</option>
-                                    <option value="Deposito">Deposito</option>
-                                    <option value="Transferencia">Transferencia</option>
-                                    <option value="Tarjeta de Debito">Tarjeta de Debito</option>
-                                	<option value="Tarjeta de Credito">Tarjeta de Credito</option>
-                                </select>
-                      </div> 
-                  
-                       
-                      
-                       <div class="form-group col-md-4">
-                                    <input required="required" name="monto" id="monto" type="" class="form-control" placeholder="Monto..." maxlength="9"/>
-                       </div>
-                       
-                         <div class="form-group col-md-4">
-                                <select class="selete" name="banco" id="banco" style="width: 100%;">
-                                    <option selected>Banco Emisor</option>
-                                    <option value="Banco Venezuela">Banco Venezuela</option>
-                                    <option value="BBVA Provincial">BBVA Provincial</option>
-                                    <option value="Mercantil">Mercantil</option>
-                                    <option value="Banesco">Banesco</option>
-                                    <option value="Industrial">Industrial</option>
-                                	<option value="Bancaribe">Bancaribe</option>
-                                	<option value="100%Banco">100%Banco</option>
-                                	<option value="Banplus">Banplus</option>
-                                	<option value="Bangente">Bangente</option>
-                                	<option value="Del Tesoro">Del Tesoro</option>
-                                	<option value="Exterior">Exterior</option>
-                                </select>
-                      </div> 
-                      
-                      <div class="form-group col-md-4">
-                                    <input required="required" name="rfbancaria" id="rfbancaria" type="" class="form-control" placeholder="Referencia Bancaria..." maxlength="9"/>
-                       </div>
-                      
-                         <div class="form-group col-md-4">
-    					 <strong>  Fecha de Operacion </strong>
-    					<input id="date" type="date">
-					 </div>
-                    
-                           <div class="form-group col-md-4">
-                                <select class="selete" name="banrecep" id="banrecep" style="width: 100%;">
-                                    <option selected>Banco Receptor</option>
-                                    <option value="Banco Venezuela">Banco Venezuela</option>
-                                    <option value="BBVA Provincial">BBVA Provincial</option>
-                                    <option value="Mercantil">Mercantil</option>
-                                    <option value="Banesco">Banesco</option>
-                                    <option value="Industrial">Industrial</option>
-                                	<option value="Bancaribe">Bancaribe</option>
-                                	<option value="100%Banco">100%Banco</option>
-                                	<option value="Banplus">Banplus</option>
-                                	<option value="Bangente">Bangente</option>
-                                	<option value="Del Tesoro">Del Tesoro</option>
-                                	<option value="Exterior">Exterior</option>
-                                </select>
-                      </div> 
-                      
-                      <div class="form-group col-md-4">
-                      <strong>Subir Archivo</strong>
-                    <input id="file-2" type="file" class="file" multiple=true data-preview-file-type="any">		  
-					      </div>    
-					                   
-                      <div class="form-group">
-                                <textarea name="message" required="required" maxlength="150" class="form-control" style="height: 130px;" placeholder="Observacion Cliente..."></textarea>
                    
+                          <div class="form-group col-md-6">
+                                    <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="Ingrese Correo Electronico..." maxlength="160" />
+                          </div>
+                    
+					
                     <!-- MOTOS-->
                     <?php
                     echo '<input type=hidden name="modelo" value="'. $_GET ['metodo'] . '">';
@@ -312,7 +244,7 @@ else {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://twitter.com/grupoelectron">
+                                    <a href="https://twitter.com/grupoelectron" target="_blank">
                                         <span class="social-icon-twitter"></span>
                                     </a>
                                 </li>
@@ -348,3 +280,4 @@ else {
 		<!-- templatemo 395 urbanic -->
     </body>
 </html>
+
