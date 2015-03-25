@@ -73,8 +73,8 @@
         <div class="templatemo-welcome" id="templatemo-welcome">
             <div class="container">
                 <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Bienvenido a </span><span class="txt_orange">Electron 465</span>
-                    <p class="txt_slogan"><i>Descubra todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
+                    <span class="txt_darkgrey">Repote de Pago </span><span class="txt_orange">Electron 465</span>
+                    
                 </div>  
             </div>
         </div>
@@ -87,7 +87,7 @@
 
     <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 <div class="row">
-    <form method="POST" action="enviarcorreo.php">
+    <form method="POST" action="enviarreportepago.php">
 </div> 
 <div class="row">
     <div class="form-group col-md-4">
@@ -102,11 +102,12 @@
 </div>
 
 <div class="row">
+
 <div class="form-group col-md-4">
-    <input  name="fecha" id="fecha" type="date" class="form-control" placeholder="Fecha de Pago..." maxlength="40" />
+   <input required="required" name="fecha" id="fecha" type="date" class="form-control" placeholder="Fecha de Pago..." maxlength="40" />
 </div>
 <div class="form-group col-md-4">
-      <select class="selete" name="banc" id="banc" style="width: 100%;">
+      <select class="selete" name="tpago" id="tpago" style="width: 100%;">
             <option selected>Tipo de Pago...</option>
             <option>Efectivo</option>
             <option>Transferencia</option>
@@ -114,16 +115,16 @@
         </select>
         </div>
 <div class="form-group col-md-4">
-    <input  name="cove" id="cove" type="" class="form-control" placeholder="Número de Referencia..." maxlength="40" />
+    <input required="required" name="numref" id="numref" type="" class="form-control" placeholder="Número de Referencia..." maxlength="40" />
 </div>
 </div>
 
 <div class="row">
 
 <div class="form-group col-md-4">
-      <select class="selete" name="banc" id="banc" style="width: 100%;">
+      <select class="selete" name="bancem" id="bancem" style="width: 100%;">
         <option selected>Banco Emisor...</option>
-        <option>BICENTENARIO</option>
+       							<option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
                                 <option>VENEZUELA</option>
@@ -143,7 +144,7 @@
         </select>
 </div>
 <div class="form-group col-md-4">
-      <select class="selete" name="banc" id="banc" style="width: 100%;">
+      <select class="selete" name="bancrecp" id="bancrecp" style="width: 100%;">
    <option selected>Banco Receptor...</option>
     <option>BICENTENARIO</option>
                                 <option>BOD</option>
@@ -178,16 +179,9 @@
 </div>
 </form>
                   
-                       
-                   
-
 
             </div><!-- /.container -->
         </div><!-- /#templatemo-contact -->
-
-
-
-
 
 
                 </div><!-- /.row -->
@@ -208,7 +202,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://twitter.com/grupoelectron" target="_blank">
                                         <span class="social-icon-twitter"></span>
                                     </a>
                                 </li>
@@ -218,7 +212,7 @@
                                     </a>
                                 </li> -->
                                 <li>
-                                    <a href="#">
+                                    <a href="https://plus.google.com/+Electron465com/about" target="_blank">
                                         <span class="social-icon-dribbble"></span>
                                     </a>
                                 </li>

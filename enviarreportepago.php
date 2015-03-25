@@ -14,36 +14,15 @@
 if (isset ( $_POST ['cedu'] )) {
 	$privatekey = "6Lc4EgMTAAAAANZiORAMganplKlZdreerMw1XIBN";
 	
-			$nacionalidad = $_POST ['naci'];
 			$cedula = $_POST ['cedu'];
-			$genero = $_POST ['gene'];
-			$primernombre = $_POST ['pnom'];
-			$segundonombre = $_POST ['snom'];
-			$primerapellido = $_POST ['pape'];
-			$segundoapellido = $_POST ['sape'];
-			$direccion = $_POST ['dire'];
-			$estado = $_POST ['esta'];
-			$ciudad = $_POST ['ciud'];
 			$correo = $_POST ['mail'];
-			$numerodecasa = $_POST ['ncas'];
-			$numerocelular = $_POST ['ncel'];
-			$whatsapp = $_POST ['wazz'];
-			$nomina = $_POST ['tnom'];
-			$empresa = $_POST ['empr'];
-			$direcciondelaempresa = $_POST ['demp'];
-			$banco = $_POST ['banc'];
-			$sueldopromedio = $_POST ['suel'];
-			$montovacaciones = $_POST ['mvac'];
-			$montoaguinaldos = $_POST ['magu'];
-			$bbmsn = $_POST ['bbms'];
-			$twitter = $_POST ['twit'];
-			$facebook = $_POST ['face'];
-			$codigovendedor = $_POST ['cove'];
-			$tipodemoto = $_POST ['tmot'];
-			$cajavelocidades = $_POST ['cvel'];
 			$monto = $_POST ['mont'];
-			$articulo = $_POST ['arti'];
-			$modelo = $_POST ['modelo'];
+			$fecha = $_POST ['fech'];
+			$tpago = $_POST ['tpag'];
+			$numref = $_POST ['numrf'];
+			$bancem = $_POST ['bancm'];
+			$bancrcp = $_POST ['bancrc'];
+			$archpag = $_POST ['archpg'];
 			if ($modelo == 'moto') {
 				$asunto = 'Solicitud por: (' . $tipodemoto . ' ' . $cajavelocidades . ')';
 			} elseif ($modelo == 'articulo') {
@@ -53,39 +32,20 @@ if (isset ( $_POST ['cedu'] )) {
 			}
 			
 			$tabla = '<table>
-			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>
-			<tr><td>Nacionalidad:</td><td>' . $nacionalidad . '</td></tr>
-			<tr><td>Cédula:</td><td>' . $cedula . '</td></tr>
-			<tr><td>Género:</td><td>' . $genero . '</td></tr>
-			<tr><td>Primer Nombre:</td><td>' . $primernombre . '</td></tr>
-			<tr><td>Segundo Nombre:</td><td>' . $segundonombre . '</td></tr>
-			<tr><td>Primer Apellido:</td><td>' . $primerapellido . '</td></tr>
-			<tr><td>Segundo Apellido:</td><td>' . $segundoapellido . '</td></tr>
-			<tr><td>Dirección Habitación:</td><td>' . $direccion . '</td></tr>
-			<tr><td>Estado:</td><td>' . $estado . '</td></tr>
-			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>
-			<tr><td>Número de Casa:</td><td>' . $numerodecasa . '</td></tr>
-			<tr><td>Número de Celular:</td><td>' . $numerocelular . '</td></tr>
-			<tr><td>Whatsapp</td><td>' . $whatsapp . '</td></tr>
-			<tr><td>Tipo de Nomina:</td><td>' . $nomina . '</td></tr>
-			<tr><td>Empresa donde Labora:</td><td>' . $empresa . '</td></tr>
-			<tr><td>Dirección de la Empresa:</td><td>' . $direcciondelaempresa . '</td></tr>
-			<tr><td>Banco por el que cobra:</td><td>' . $banco . '</td></tr>
-			<tr><td>Sueldo Promedio Mensual:</td><td>' . $sueldopromedio . '</td></tr>
-			<tr><td>Monto a Cobrar en Vacaciones:</td><td>' . $montovacaciones . '</td></tr>
-			<tr><td>Monto a Cobrar en Aguinaldos:</td><td>' . $montoaguinaldos . '</td></tr>
-			<tr><td>Pin de Blackberry:</td><td>' . $bbmsn . '</td></tr>
-			<tr><td>Usuario de Twitter:</td><td>' . $twitter . '</td></tr>
-			<tr><td>Usuario de Facebook:</td><td>' . $facebook . '</td></tr>
-			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>
-			<tr><td>Caja de Velocidades:</td><td>' . $cajavelocidades . '</td></tr>
-			<tr><td>Monto Solicitado:</td><td>' . $monto . '</td></tr>
-			<tr><td>Artículo:</td><td>' . $articulo . '</td></tr>
+			<tr><td>Cedula:</td><td>' . $cedula . '</td></tr>
+			<tr><td>Correo:</td><td>' . $correo . '</td></tr>
+			<tr><td>Monto:</td><td>' . $monto . '</td></tr>
+			<tr><td>Fecha:</td><td>' . $fecha . '</td></tr>
+			<tr><td>Tipo de pago:</td><td>' . $tpago . '</td></tr>
+			<tr><td>Num Referencia:</td><td>' . $numref . '</td></tr>
+			<tr><td>Banco emisor:</td><td>' . $bancem . '</td></tr>
+			<tr><td>Banco receptor:</td><td>' . $bancrcp . '</td></tr>
+			<tr><td>archivo pago:</td><td>' . $archpag . '</td></tr>
 			</table>';
 			echo $tabla;
 			
-			/*
-			$insertar = "insert into solicitud (c323232odigovendedor, nacionalidad, cedula, genero, pnombre, snombre, papellido, sapellido, direccionh, estado, correo, telefonocasa, numerocelular, whatsapp, nomina, empresa, direccionempresa, banco, sueldopromedio, vacaciones, aguinaldos, twitter, facebook, tipomoto, cajavelocidades, montosolicitado, articulo) values ('".$codigovendedor."','".$nacionalidad."','".$cedula."','".$genero."','".$primernombre."','".$segundonombre."','".$primerapellido."','".$segundoapellido."', '".$direccion."', '".$estado."', '".$correo."', '".$numerodecasa."','".$numerocelular."', '".$whatsapp."', '".$nomina."', '".$empresa."', '".$direcciondelaempresa."', '".$banco."', '".$sueldopromedio."', '".$montovacaciones."','".$bbmsn."', '".$twitter."', '".$facebook."', '".$tipodemoto."', '".$cajavelocidades."', '".$monto."', '".$articulo."')";
+
+			$insertar = "insert into solicitud (cedula, correo, monto, monto, fecha, tpago, numref, bancem, banrcp, archpag) values ('".$cedula."','".$correo."','".$monto."','".$fecha."','".$tpago."','".$numref."','".$bancem."','".$bancrcp."', '".$archpag."')";
 			
 			$conexion=mysql_connect('localhost', 'electro4_webelectron', 'p13=3e8lxTTB');
 			if ( !$conexion ) {echo 'no se pudo conectar';}
@@ -103,7 +63,7 @@ if (isset ( $_POST ['cedu'] )) {
 			mail ( $to, $subject, $tabla, $headers );
 			echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
-			*/
+		
 
 } else {
 	header ( 'Location: index.html' );

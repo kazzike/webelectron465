@@ -87,8 +87,8 @@ $error = null;
         <div class="templatemo-welcome" id="templatemo-welcome">
             <div class="container">
                 <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Bienvenido a </span><span class="txt_orange">Electron 465</span>
-                    <p class="txt_slogan"><i>Descubra todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
+                    <span class="txt_darkgrey">Solicitud de Estado de Cuenta </span><span class="txt_orange">Electron 465</span>
+                    
                 </div>	
             </div>
         </div>
@@ -99,15 +99,6 @@ $error = null;
         <div>
             <div class="container">
 
-
-                <div class="row">
-                    <div class="templatemo-line-header head_contact">
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">SOLICITUD DE ESTADO DE CUENTA</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
-                        </div>
-                    </div>
-				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 				 <strong><p align="justify">Antes de Ingresar Verifique que el CORREO este Validado por la Empresa si no comuniquese con nosotros 0274 251 22 60.</p> <p>&nbsp;</p></strong> 
                        
