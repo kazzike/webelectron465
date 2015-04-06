@@ -99,7 +99,7 @@ $error = null;
         <div>
             <div class="container">
 
-
+				
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
@@ -110,165 +110,15 @@ $error = null;
 				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 
-                       <div class="row">
-						 <form method="POST" action="enviarcorreo.php">
-                            <div class="form-group col-md-4">
-								<select class="selete" name="naci" id="naci" style="width: 100%;">
-									<option selected>Documento Identidad</option>
-                                    <option>Venezolano</option>
-									<option>Extranjero</option>
-									<option>R.I.F.</option>
-								</select>
-						    </div>
-
-
-                      <div class="form-group col-md-4">
-                                <input maxlength="9" required="required" name="cedu" id="cedu" type="" class="form-control" placeholder="Tu Cédula o Rif..." />
-                      </div>
-                      <div class="form-group col-md-4">
-                                <select class="selete" name="gene" id="gene" style="width: 100%;">
-                                    <option selected>Tu Género</option>
-                                    <option>Masculino</option>
-                                    <option>Femenino</option>
-                                    <option>Otro</option>
-                                </select>
-                      </div> 
-                      </div> 
+                      <form method="POST" action="enviarcorreo.php"> 
                       <div class="row">
-                            <div class="form-group col-md-6">
-                                    <input required="required" name="pnom" id="pnom" type="" class="form-control" placeholder="Tu Primer Nombre..." maxlength="40" />
-                          </div>    
-                           <div class="form-group col-md-6">
-                                    <input name="snom" id="snom" type="" class="form-control" placeholder="Tu Segundo Nombre..." maxlength="40" />
-                          </div>
-                      </div>
-                      <div class="row">
-
-                             <div class="form-group col-md-6">
-                                    <input required="required"name="pape" id="pape" type="" class="form-control" placeholder="Tu Primer Apellido..." maxlength="40" />
-                          </div>    
-                           <div class="form-group col-md-6">
-                                    <input name="sape" id="sape" type="" class="form-control" placeholder="Tu Segundo Apellido..." maxlength="40" />
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="form-group col-md-12">
-                                    <input required="required" name="dire" id="dire" type="" class="form-control" placeholder="¿Dirección Fiscal?... (Tu Dirección como aparece en el R.I.F.)" maxlength="200" />
-                          </div>
-                            <div class="form-group col-md-4">
-                                    <select required aria-required="true"  class="selete" name="esta" id="esta" style="width: 100%;">
-                                        <option selected>Selecciona tu Estado</option>
-                                        <option value="Amazonas">Amazonas</option>
-                                        <option value="Apure">Apure</option>
-                                        <option value="Aragua">Aragua</option>
-                                        <option value="Anzoategui">Anzoategui</option>
-                                        <option value="Barinas">Barinas</option>
-                                        <option value="Bolivar">Bolivar</option>
-                                        <option value="Carabobo">Carabobo</option>
-                                        <option value="Cojedes">Cojedes</option>
-                                        <option value="Delta">Delta Amacuro</option>
-                                        <option value="Distrito">Distrito Capital</option>
-                                        <option value="Falcon">Falcon</option>
-                                        <option value="Guarico">Guarico</option>
-                                        <option value="Lara">Lara</option>
-                                        <option value="Merida">Merida</option>
-                                        <option value="Miranda">Miranda</option>
-                                        <option value="NuevaE">Nueva Esparta</option>
-                                        <option value="Portuguesa">Portuguesa</option>
-                                        <option value="Sucre">Sucre</option>
-                                        <option value="Trujillo">Trujillo</option>
-                                        <option value="Tachira">Tachira</option>
-                                        <option value="Yaracuy">Yaracuy</option>
-                                        <option value="Vargas">Vargas</option>
-                                        <option value="Zulia">Zulia</option>
-                                    </select>
-                          </div>  
-                           <div class="form-group col-md-4">
-                                    <input required="required" name="ciud" id="ciud" type="" class="form-control" placeholder="¿En que Ciudad Vives?..." maxlength="80" />
-                          </div>
+                          
                           <div class="form-group col-md-4">
                                     <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="160" />
                           </div>
-                    </div>
+                    </div>                                                            
+                     
                     <div class="row">
-                      <div class="form-group col-md-4">
-                        <input required="required" name="ncas" id="ncas" type="" class="form-control" placeholder="Tú número de teléfono (de casa)..." maxlength="40" />
-                      </div>
-                      <div class="form-group col-md-4">
-                        <input required="required" name="ncel" id="ncel" type="" class="form-control" placeholder="Tú número de celular..." maxlength="40" />
-                      </div>
-                    <div class="form-group col-md-4">
-                        <select class="selete" name="wazz" id="wazz" style="width: 100%;">
-                            <option selected>¿Usas Whatsapp?</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                     </div>  
-                  
-                     </div> 
-                     <div class="row">
-                            <div class="form-group col-md-4">
-                                <select class="selete" name="tnom" id="tnom" style="width: 100%;">
-                                    <option selected>Tu Tipo de Nomina</option>
-                                    <option>Pública</option>
-                                    <option>Privada</option>
-                                </select>
-                            </div>  
-                              <div class="form-group col-md-4">
-                            <input required="required" name="empr" id="empr" type="" class="form-control" placeholder="Nombre de la empresa donde trabajas..." maxlength="200" />
-                            </div>  
-                    <div class="form-group col-md-4">
-                            <select class="selete" name="banc" id="banc" style="width: 100%;">
-                                <option selected>Banco donde pagan tu nomina...</option>
-                                <option>BICENTENARIO</option>
-                                <option>BOD</option>
-                                <option>PROVINCIAL</option>
-                                <option>VENEZUELA</option>
-                                <option>BANESCO</option> 
-                                <option>INDUSTRIAL</option>
-                                <option>CAMARA MERCANTIL</option>
-                                <option>CREDINFO</option>
-                                <option>INVERCRESA</option>
-                                <option>FONDO COMUN</option>
-                                <option>100% BANCO COMERCIAL</option>
-                                <option>DOMICILIACION POR OFICINA</option>
-                                <option>SOFITASA</option> 
-                                <option>DEL SUR</option>
-                                <option>CARONI</option>
-                                <option>CARIBE</option>
-                                <option>MERCANTIL</option>
-                                <option>NINGUNA DE LAS ANTERIORES</option>                                                                    
-                            </select>
-                        </div>  
-                     </div>
-                     <div class="row">
-                            <div class="form-group col-md-12">
-                            <input required="required" name="demp" id="demp" type="" class="form-control" placeholder="Direción de la empresa donde trabajas..." maxlength="200" />
-                            </div>  
-                     </div>
-                     <div class="row">
-
-							<div class="form-group col-md-4">
-                            <input required="required" name="suel" id="suel" type="" class="form-control" placeholder="Sueldo Promedio Mensual..." maxlength="40" />
-                            </div>
-                       
-                        <div class="form-group col-md-4">
-                            <input required="required" name="mvac" id="mvac" type="" class="form-control" placeholder="¿Monto estimado a recibir en vacaciones?..." maxlength="40" />
-                        </div>  
-                          <div class="form-group col-md-4">
-                            <input required="required" name="magu" id="magu" type="" class="form-control" placeholder="¿Monto estimado a recibir en Aguinaldos?..." maxlength="40" />
-                        </div>
-                        </div>
-                    <div class="row">
-                        <div class="form-group col-md-3">
-                            <input name="bbms" id="bbms" type="" class="form-control" placeholder="Tu PIN de BBMSN..." maxlength="40" />
-                        </div>
-                         <div class="form-group col-md-3">
-                            <input  name="twit" id="twit" type="" class="form-control" placeholder="Tu Usuario de Twitter..." maxlength="40" />
-                        </div>
-                         <div class="form-group col-md-3">
-                            <input  name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
-                        </div>
                         <div class="form-group col-md-3">
                             <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
                         </div>
