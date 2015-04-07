@@ -166,7 +166,7 @@
         </select>
 </div>
 <div class="form-group col-md-4">
-    <input value="Adjuntar Archivo" type="file"><br /><br />
+  <!-- Subir archivo digital <input value="Adjuntar Archivo" type="file"><br /><br /> -->
 </div>
 </div>
 
