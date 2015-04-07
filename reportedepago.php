@@ -58,9 +58,9 @@
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
                                 <li class="active"><a href="index.html">INICIO</a></li>
-                                <li><a href="">LA EMPRESA</a></li>                                          
+                               <!-- <li><a href="index.">LA EMPRESA</a></li>                                          
                                 <li><a href="">CONTACTO</a></li>
-                               <!--  <li><a href="#templatemo-about">SUCURSALES</a></li> -->
+                                 <li><a href="#templatemo-about">SUCURSALES</a></li> -->
                                 
                             </ul>
                         </div><!--/.nav-collapse -->
@@ -73,7 +73,7 @@
         <div class="templatemo-welcome" id="templatemo-welcome">
             <div class="container">
                 <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Repote de Pago </span><span class="txt_orange">Electron 465</span>
+                    <span class="txt_darkgrey">Reporte de Pago </span><span class="txt_orange">Electron 465</span>
                     
                 </div>  
             </div>
