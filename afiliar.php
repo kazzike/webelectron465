@@ -103,7 +103,7 @@ $error = null;
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">FORMULARIO</span>
+                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">FORMULARIO DE AFILIACI&Oacute;N</span>
                             <hr class="team_hr team_hr_right hr_gray"/>
                         </div>
                     </div>
