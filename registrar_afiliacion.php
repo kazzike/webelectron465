@@ -79,7 +79,7 @@ if (isset ( $_POST ['cedu'] )) {
 							'".$direcciondelaempresa."', '".$banco."', '".$sueldopromedio."', '".$montovacaciones."','".$bbmsn."', 
 									'".$twitter."', '".$facebook."')";
 			
-			$conexion=mysql_connect('localhost', 'electro4_webelectron', 'p13=3e8lxTTB');
+			$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
 			if ( !$conexion ) {echo 'no se pudo conectar';}
 			mysql_select_db('electro4_webelectron', $conexion);
 			mysql_query($insertar);
