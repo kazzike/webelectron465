@@ -9,6 +9,7 @@
 <body>
 
 <?php
+require_once("inc/PHPMail/class.phpmailer.php");
 
 
 if (isset ( $_POST ['cedu'] )) {
@@ -70,48 +71,79 @@ if (isset ( $_POST ['cedu'] )) {
 			</table>';
 			
 			
-			$insertar = "insert into solicitud (codigovendedor, nacionalidad, cedula, genero, pnombre, snombre, papellido, sapellido, direccionh, estado, 
+			$insertar = "INSERT IGNORE INTO afiliacion (codigovendedor, nacionalidad, cedula, genero, pnombre, snombre, papellido, 
+							sapellido, direccionh, estado, 
 					correo, telefonocasa, numerocelular, whatsapp, nomina, empresa, direccionempresa, banco, sueldopromedio, vacaciones, 
 					aguinaldos, twitter, facebook) 
-					values ('".$codigovendedor."','".$nacionalidad."','".$cedula."','".$genero."','".$primernombre."',
+					VALUES ('".$codigovendedor."','".$nacionalidad."','".$cedula."','".$genero."','".$primernombre."',
 							'".$segundonombre."','".$primerapellido."','".$segundoapellido."', '".$direccion."', '".$estado."', 
 							'".$correo."', '".$numerodecasa."','".$numerocelular."', '".$whatsapp."', '".$nomina."', '".$empresa."', 
 							'".$direcciondelaempresa."', '".$banco."', '".$sueldopromedio."', '".$montovacaciones."','".$bbmsn."', 
 									'".$twitter."', '".$facebook."')";
-			
+
+
 			$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
 			if ( !$conexion ) {echo 'no se pudo conectar';}
 			mysql_select_db('electro4_webelectron', $conexion);
 			mysql_query($insertar);
-			$md5correo = md5($correo);
+			//echo $insertar;
+
+			
+			$md5correo = md5($correo);			
 			$tiempo = date("Y/m/d");
-			$insertar = "INSERT INTO validar (correo, codigo, esttus, fecha) VALUES ('$correo','$md5correo','P','$tiempo')";
+			
+			
+			$insertar = "INSERT IGNORE INTO validar (correo, codigo, estatus) VALUES ('$correo','$md5correo','P')";
+		//echo "<br><br>" . $insertar;
 			mysql_query($insertar);
 			
-			//Enviando correo interno
-			$to = 'electron465empresa@gmail.com';
-			$subject = $asunto;
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <' . $correo . '>' . "\r\n";
-			$headers .= 'Cc: electronbackup@gmail.com' . "\r\n";			
-			mail ( $to, $subject, $tabla, $headers );
-			
 			//Enviando correo al cliente
-			$to = $correo;
-			$subject = "Certificaci&oacute;n Cuenta Electr&oacute;n 465";
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <' . $correo . '>' . "\r\n";
-			//$headers .= 'Cc: electronbackup@gmail.com' . "\r\n";
-
 			$ruta = "Sigue el siguiente enlace <a href='http://electron465.com/verificar.php?v=$md5correo'>Verificar Correo electronico</a>";
-			mail ( $to, $subject, $tabla, $headers );
+
+
+	$mail = new PHPMailer();
+
+	$body                ='<body style="margin: 10px;">Prueba de Envio<br /></body>';//file_get_contents('');
+	    //$body                = preg_replace('/[\]/','',$body);        
+	$mail->IsSMTP(); // telling the class to use SMTP
+	    
+	$mail->SMTPDebug  = 1;
+	$mail->Host          = "smtp.gmail.com";
+	$mail->SMTPSecure = "tls";     
+	$mail->SMTPAuth      = true;                  // enable SMTP authentication
+	$mail->SMTPKeepAlive = true;                  // SMTP connection will not close after each email sent
+	    
+	$mail->Port          = 587;    
+	$mail->Username      = "soporteelectron465@gmail.com"; // SMTP account username
+	$mail->Password      = "soporte8759";        // SMTP account password
+
+	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Afiliacion al Cliente');
+	$mail->AddReplyTo('soporteelectron465@gmail.com', 'Solicitud Afiliacion');
+	$mail->Subject = 'Certificacion Cuenta Electron 465';    
+	    
+	$cuerpo = $ruta;
+	
+	$mail->AltBody    = "Texto Alternativo"; // optional, comment out and test
+	$mail->MsgHTML($cuerpo);
+	$address = $correo;
+	$name = $primernombre . " " . $primerapellido;
+	$mail->AddAddress($address, $name);
+
+
+
+
+
 			
-			
-			echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
+			echo '<br><br><center><H1>Su afiliacion ha sido procesada.
+							Por favor has click en el enlace que enviamos a tu correo ' . $correo . ', a fines de verificar su cuenta
+							<br><br>Gracias por su tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
-		
+			if(!$mail->Send()) {
+	  return "Error al enviar: " . $mail->ErrorInfo;
+	} else {
+	  return "Mensaje enviado a:  " .  $address . "!";
+	}
+
 
 } else {
 	header ( 'Location: index.html' );
