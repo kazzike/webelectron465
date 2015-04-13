@@ -98,7 +98,7 @@ if (isset ( $_POST ['cedu'] )) {
 			mysql_query($insertar);
 			
 			//Enviando correo al cliente
-			$ruta = "Sigue el siguiente enlace <a href='http://electron465.com/verificar.php?v=$md5correo'>Verificar Correo electronico</a>";
+			$ruta = "Sigue el siguiente enlace <a href='http://electron465.com/verificar.php?v=$md5correo&c=$correo&t=sis-electron'>Verificar Correo electronico</a>";
 
 
 	$mail = new PHPMailer();
@@ -134,9 +134,9 @@ if (isset ( $_POST ['cedu'] )) {
 
 
 			
-			echo '<br><br><center><H1>Su afiliacion ha sido procesada exitosamente
-							Debes hacer clic en el enlace que hemos enviado a tu correo electronico ' . $correo . ', para activar tu cuenta.
-							<br><br>Gracias por tu tiempo</H1><br><br>
+			echo '<br><br><center><H1>Su afiliacion ha sido procesada.
+							Por favor has click en el enlace que enviamos a tu correo ' . $correo . ', a fines de verificar su cuenta
+							<br><br>Gracias por su tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 			if(!$mail->Send()) {
 	  return "Error al enviar: " . $mail->ErrorInfo;
