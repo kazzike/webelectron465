@@ -134,9 +134,9 @@ if (isset ( $_POST ['cedu'] )) {
 
 
 			
-			echo '<br><br><center><H1>Su afiliacion ha sido procesada.
-							Por favor has click en el enlace que enviamos a tu correo ' . $correo . ', a fines de verificar su cuenta
-							<br><br>Gracias por su tiempo</H1><br><br>
+			echo '<br><br><center><H1>Su afiliacion ha sido procesada exitosamente
+							Debes hacer clic en el enlace que hemos enviado a tu correo electronico ' . $correo . ', para activar tu cuenta.
+							<br><br>Gracias por tu tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 			if(!$mail->Send()) {
 	  return "Error al enviar: " . $mail->ErrorInfo;
