@@ -36,10 +36,7 @@ if(isset($_GET['v'])){
 	echo $fila;
 	if($fila > 0){
 
-	 $mail = new PHPMailer();
-
-	$body                ='<body style="margin: 10px;">Prueba de Envio<br /></body>';//file_get_contents('');
-	    //$body                = preg_replace('/[\]/','',$body);        
+	 $mail = new PHPMailer();    
 	$mail->IsSMTP(); // telling the class to use SMTP
 	    
 	$mail->SMTPDebug  = 1;
@@ -53,7 +50,7 @@ if(isset($_GET['v'])){
 	$mail->Password      = "soporte8759";        // SMTP account password
 
 	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Atenci&oacute;n al Cliente');
-	$mail->AddReplyTo($email, 'Solicitud Cliente');
+	$mail->AddReplyTo('electron465empresa@gmail.com', 'Afiliacion');
 	$mail->Subject = 'Grupo Electron (Atencion al Cliente)';    
 	    
 	$cuerpo = "Debe imprimir el documento adjunto y consignar los siguientes requisitos
@@ -65,9 +62,9 @@ if(isset($_GET['v'])){
 			
 	    $mail->AltBody    = "Texto Alternativo"; // optional, comment out and test
 	    $mail->MsgHTML($cuerpo);
-			$address = "soporteelectron465@gmail.com";
+			$address = $_GET['c'];
 			
-	    $mail->AddAddress($address, $name);
+	    $mail->AddAddress($address, "Afiliacion Electron 465");
 	    if(!$mail->Send()) {
 	      return "Error al enviar: " . $mail->ErrorInfo;
 	    } else {
