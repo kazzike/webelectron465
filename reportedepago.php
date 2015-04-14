@@ -160,7 +160,15 @@
         </select>
 </div>
 <div class="form-group col-md-4">
-  <!-- Subir archivo digital <input value="Adjuntar Archivo" type="file"><br /><br /> -->
+	<!-- Subir archivo digital <input value="Adjuntar Archivo" type="file"><br /><br /> -->
+<select class="selete" name="conceptopago" style="width: 100%;">
+   <option selected>Pago por concepto de...</option>
+    														<option></option>
+                                <option>Inicial</option>
+                                <option>Abono (Mensualidad)</option>   
+        </select>
+
+
 </div>
 </div>
 

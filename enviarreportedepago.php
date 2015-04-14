@@ -19,6 +19,7 @@ if (isset ( $_POST ['cedula'] )) {
 	$numref = $_POST ['numref'];
 	$bancem = $_POST ['bancem'];
 	$bancrecp = $_POST ['bancrecp'];
+	$concepto = $_POST['conceptopago'];
 	
 
 
@@ -45,7 +46,7 @@ if (isset ( $_POST ['cedula'] )) {
 
 	$mail->SetFrom('soporteelectron465@gmail.com', 'Reporte de Pagos');
 	$mail->AddReplyTo($correo, 'Reporte de pago del Cliente');
-	$mail->Subject = 'Grupo Electron (Reporte de Pagos)';    
+	$mail->Subject = 'Reporte de Pago (' . $name . ')';    
 	    
 	$cuerpo = "<table>
 					<tr><td>Cedula:</td><td>$name</td></tr>
@@ -55,7 +56,9 @@ if (isset ( $_POST ['cedula'] )) {
 					<tr><td>Tipo de Pago:</td><td>$tpago</td></tr>
 					<tr><td>N. de Referencia:</td><td>$numref</td></tr>
 					<tr><td>Banco Emisor:</td><td>$bancem</td></tr>
-					<tr><td>Banco Receptor:</td><td>$bancrecp</td></tr></table>
+					<tr><td>Banco Receptor:</td><td>$bancrecp</td></tr>
+					<tr><td>Pago por Concepto:</td><td>$concepto</td></tr>
+					</table>
 					";
 	
   $mail->AltBody    = "Grupo Electron"; // optional, comment out and test
@@ -67,7 +70,6 @@ if (isset ( $_POST ['cedula'] )) {
   } else {
     $msj = "Mensaje enviado a:  " .  $address . "!";
   }
-
 
 
 
