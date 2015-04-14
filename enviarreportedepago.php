@@ -20,11 +20,9 @@ if (isset ( $_POST ['cedula'] )) {
 	$bancem = $_POST ['bancem'];
 	$bancrecp = $_POST ['bancrecp'];
 	
-	$to = 'gesaodin@gmail.com';
 
-	$ruta = "https://www.google.com/recaptcha/api/siteverify?";
+
 	
-	//print_r ();
 	echo '<br><br><center><H1>Su mensaje ha sido enviado, Gracias por Comunicarse con Nosotros...</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 

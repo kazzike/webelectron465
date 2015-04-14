@@ -87,7 +87,7 @@
 
     <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 <div class="row">
-    <form method="POST" action="enviarreportepago.php">
+    <form method="POST" action="enviarreportedepago.php">
 </div> 
 <div class="row">
     <div class="form-group col-md-4">
