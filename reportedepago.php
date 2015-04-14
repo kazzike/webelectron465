@@ -124,18 +124,15 @@
 <div class="form-group col-md-4">
       <select class="selete" name="bancem" id="bancem" style="width: 100%;">
         <option selected>Banco Emisor...</option>
-       							<option>BICENTENARIO</option>
+       													<option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
                                 <option>VENEZUELA</option>
                                 <option>BANESCO</option> 
                                 <option>INDUSTRIAL</option>
                                 <option>CAMARA MERCANTIL</option>
-                                <option>CREDINFO</option>
-                                <option>INVERCRESA</option>
                                 <option>FONDO COMUN</option>
                                 <option>100% BANCO COMERCIAL</option>
-                                <option>DOMICILIACION POR OFICINA</option>
                                 <option>SOFITASA</option> 
                                 <option>DEL SUR</option>
                                 <option>CARONI</option>
@@ -146,18 +143,15 @@
 <div class="form-group col-md-4">
       <select class="selete" name="bancrecp" id="bancrecp" style="width: 100%;">
    <option selected>Banco Receptor...</option>
-    <option>BICENTENARIO</option>
+    														<option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
                                 <option>VENEZUELA</option>
                                 <option>BANESCO</option> 
                                 <option>INDUSTRIAL</option>
                                 <option>CAMARA MERCANTIL</option>
-                                <option>CREDINFO</option>
-                                <option>INVERCRESA</option>
                                 <option>FONDO COMUN</option>
-                                <option>100% BANCO COMERCIAL</option>
-                                <option>DOMICILIACION POR OFICINA</option>
+                                <option>100% BANCO COMERCIAL</option>                                
                                 <option>SOFITASA</option> 
                                 <option>DEL SUR</option>
                                 <option>CARONI</option>
