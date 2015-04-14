@@ -30,8 +30,7 @@ if (isset ( $_POST ['cedula'] )) {
 
 	$mail = new PHPMailer();
 
-	$body                ='<body style="margin: 10px;">Prueba de Envio<br /></body>';//file_get_contents('');
-	    //$body                = preg_replace('/[\]/','',$body);        
+	$body                ='<body style="margin: 10px;">Prueba de Envio<br /></body>'; 
 	$mail->IsSMTP(); // telling the class to use SMTP
 	    
 	$mail->SMTPDebug  = 1;
@@ -44,24 +43,30 @@ if (isset ( $_POST ['cedula'] )) {
 	$mail->Username      = "soporteelectron465@gmail.com"; // SMTP account username
 	$mail->Password      = "soporte8759";        // SMTP account password
 
-	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Reporte de Pagos');
-	$mail->AddReplyTo($email, 'Reporte de pago del Cliente');
+	$mail->SetFrom('soporteelectron465@gmail.com', 'Reporte de Pagos');
+	$mail->AddReplyTo($correo, 'Reporte de pago del Cliente');
 	$mail->Subject = 'Grupo Electron (Reporte de Pagos)';    
 	    
-	$cuerpo = $message;
+	$cuerpo = "<table>
+					<tr><td>Cedula:</td><td>$name</td></tr>
+					<tr><td>Correo:</td><td>$correo</td></tr>
+					<tr><td>Monto:</td><td>$monto</td></tr>
+					<tr><td>Fecha:</td><td>$fecha</td></tr>
+					<tr><td>Tipo de Pago:</td><td>$tpago</td></tr>
+					<tr><td>N. de Referencia:</td><td>$numref</td></tr>
+					<tr><td>Banco Emisor:</td><td>$bancem</td></tr>
+					<tr><td>Banco Receptor:</td><td>$bancrecp</td></tr></table>
+					";
 	
-	    $mail->AltBody    = "Grupo Electron"; // optional, comment out and test
-	    $mail->MsgHTML($cuerpo);
-      $address = "reportepagoselectron@gmail.com";
-	    $mail->AddAddress($address, $name);
-	    if(!$mail->Send()) {
-	      return "Error al enviar: " . $mail->ErrorInfo;
-	    } else {
-	      return "Mensaje enviado a:  " .  $address . "!";
-	    }
-
-
-
+  $mail->AltBody    = "Grupo Electron"; // optional, comment out and test
+  $mail->MsgHTML($cuerpo);
+  $address = "reportepagoselectron@gmail.com";
+  $mail->AddAddress($address, $_POST['cedula']);
+  if(!$mail->Send()) {
+    $msj = "Error al enviar: " . $mail->ErrorInfo;
+  } else {
+    $msj = "Mensaje enviado a:  " .  $address . "!";
+  }
 
 
 

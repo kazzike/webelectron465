@@ -76,7 +76,7 @@ if(isset($_GET['v'])){
 				<a href='https://drive.google.com/file/d/0B2pY6Lv3m6iqRUVrenpya1VlejQ/view?usp=sharing'>
 				Aqui</a>,  
 				Si no posee otro tipo de Correo (Hotmail, Yahoo, entre otros) haga clik en el siguiente enlace
-				<a href='afiliacion/afiliacion.pdf'>Aqui</a>
+				<a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Aqui</a>
 				<br>
 				Todos estos recaudos deben colocarse en una carpeta amarilla tamaño oficio, sin grapas, tachaduras, 
 				enmiendas, u orificios y dicha carpeta debe colocarse en un sobre manila tamaño oficio para ser enviado a 
