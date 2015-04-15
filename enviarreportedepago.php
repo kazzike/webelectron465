@@ -15,7 +15,7 @@ if (isset ( $_POST ['cedula'] )) {
 	$correo = $_POST ['correo'];
 	$monto = $_POST ['monto'];
 	$fecha = $_POST ['fecha'];
-	$tpago = $_POST ['monto'];
+	$tpago = $_POST ['tpago'];
 	$numref = $_POST ['numref'];
 	$bancem = $_POST ['bancem'];
 	$bancrecp = $_POST ['bancrecp'];

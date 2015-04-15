@@ -109,7 +109,6 @@
 <div class="form-group col-md-4">
       <select class="selete" name="tpago" id="tpago" style="width: 100%;">
             <option selected>Tipo de Pago...</option>
-            <option>Efectivo</option>
             <option>Transferencia</option>
             <option>Depósito</option>                                       
         </select>
@@ -124,13 +123,12 @@
 <div class="form-group col-md-4">
       <select class="selete" name="bancem" id="bancem" style="width: 100%;">
         <option selected>Banco Emisor...</option>
-       													<option>BICENTENARIO</option>
+       					        <option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
                                 <option>VENEZUELA</option>
                                 <option>BANESCO</option> 
                                 <option>INDUSTRIAL</option>
-                                <option>CAMARA MERCANTIL</option>
                                 <option>FONDO COMUN</option>
                                 <option>100% BANCO COMERCIAL</option>
                                 <option>SOFITASA</option> 
@@ -143,16 +141,14 @@
 <div class="form-group col-md-4">
       <select class="selete" name="bancrecp" id="bancrecp" style="width: 100%;">
    <option selected>Banco Receptor...</option>
-    														<option>BICENTENARIO</option>
+    							<option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
                                 <option>VENEZUELA</option>
                                 <option>BANESCO</option> 
                                 <option>INDUSTRIAL</option>
-                                <option>CAMARA MERCANTIL</option>
                                 <option>FONDO COMUN</option>
-                                <option>100% BANCO COMERCIAL</option>                                
-                                <option>SOFITASA</option> 
+                                <option>100% BANCO COMERCIAL</option>                                                           <option>SOFITASA</option> 
                                 <option>DEL SUR</option>
                                 <option>CARONI</option>
                                 <option>CARIBE</option>
@@ -160,12 +156,14 @@
         </select>
 </div>
 <div class="form-group col-md-4">
-	<!-- Subir archivo digital <input value="Adjuntar Archivo" type="file"><br /><br /> -->
+	<input required="required" name="conceptopago" id="conceptopago" type="" class="form-control" placeholder="Pago por concepto de..." maxlength="200" />
+    
+    <!-- Subir archivo digital <input value="Adjuntar Archivo" type="file"><br /><br /> 
   <select class="selete" name="conceptopago" style="width: 100%;">
 	  <option selected>Pago por concepto de...</option>
 		<option>INICIAL</option>
     <option>ABONO (MENSUALIDAD)</option>   
-  </select>
+  </select>-->
 
 
 </div>
