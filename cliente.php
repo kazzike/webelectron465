@@ -1,7 +1,7 @@
 <?php
 require_once ("lib/nusoap.php");
 
-$client = new nusoap_client('http://localhost/webelectron465/servidorwsdl.php?wsdl&#8217', true);
+$client = new nusoap_client('http://electron465.com/servidorwsdl.php?wsdl&#8217', true);
 
 /**
 $err = $client->getError ();

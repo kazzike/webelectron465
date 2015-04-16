@@ -49,11 +49,11 @@ function Afiliado($persona) {
 	$ValidarNombre = '';
 	$Correo = '';
 		
-	$conexion = mysql_connect ( 'localhost', 'root', 'za63qj2p' );
+	$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
 	if (! $conexion) {
 		echo 'no se pudo conectar';
 	}
-	mysql_select_db ( 'webelectron465', $conexion );
+	mysql_select_db ( 'electro4_webelectron', $conexion );
 	
 	$consultar = 'SELECT * FROM afiliacion WHERE cedula=\'' . $persona['Cedula'] . '\'';
 	
