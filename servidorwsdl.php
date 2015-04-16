@@ -44,8 +44,8 @@ array (
 
 function Afiliado($persona) {
 	global $server;
-	$ClienteExiste = false;
-	$ValidarCuenta = 'UPSA';
+	$ClienteExiste = 0;
+	$ValidarCuenta = '';
 	$ValidarNombre = '';
 	$Correo = '';
 		
@@ -62,7 +62,7 @@ function Afiliado($persona) {
 	$fila = mysql_num_rows ( $rs );
 	
 	if ($fila > 0) {
-		$ClienteExiste = true;
+		$ClienteExiste = 1;
 		while($afiliado = mysql_fetch_object($rs)){
 			$valNom = $afiliado->pnombre . ' ' . $afiliado->snombre . ' ' . $afiliado->papellido . ' ' . $afiliado->sapellido;
 			$ValidarNombre = md5($valNom);
