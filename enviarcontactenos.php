@@ -40,7 +40,7 @@ if (isset ( $_POST ['name'] )) {
 	$mail->Username      = "soporteelectron465@gmail.com"; // SMTP account username
 	$mail->Password      = "soporte8759";        // SMTP account password
 
-	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Atenci&oacute;n al Cliente');
+	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Atencion');
 	$mail->AddReplyTo($email, 'Solicitud Cliente');
 	$mail->Subject = 'Grupo Electron (Atencion al Cliente)';    
 	    
