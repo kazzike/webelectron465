@@ -24,7 +24,7 @@ if (isset ( $_POST ['cedula'] )) {
 
 
 	
-	echo '<br><br><center><H1>Su mensaje ha sido enviado, Gracias por Comunicarse con Nosotros...</H1><br><br>
+	echo '<br><br><center><H1>Su mensaje ha sido enviado, Gracias por reportar tus pagos...</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 
 
