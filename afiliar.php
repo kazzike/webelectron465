@@ -172,6 +172,7 @@ $error = null;
                                         <option value="Guarico">Guarico</option>
                                         <option value="Lara">Lara</option>
                                         <option value="Merida">Merida</option>
+                                        <option value="Merida">Monagas</option>
                                         <option value="Miranda">Miranda</option>
                                         <option value="NuevaE">Nueva Esparta</option>
                                         <option value="Portuguesa">Portuguesa</option>
