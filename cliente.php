@@ -14,7 +14,7 @@ if ($err) {
 
 
 $person = array (
-		"Cedula" => "17522251"
+		"Cedula" => "00"
 );
 $result = $client->call ("Afiliado", array (
 		"person" => $person 

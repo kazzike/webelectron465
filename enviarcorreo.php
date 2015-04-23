@@ -9,27 +9,46 @@
 <body>
 
 <?php
-
+require_once ("inc/PHPMail/class.phpmailer.php");
 
 if (isset ( $_POST ['mail'] )) {
-	$privatekey = "6Lc4EgMTAAAAANZiORAMganplKlZdreerMw1XIBN";
 	
-			$correo = $_POST ['mail'];			
-			$codigovendedor = $_POST ['cove'];
-			$tipodemoto = $_POST ['tmot'];
-			$cajavelocidades = $_POST ['cvel'];
-			$monto = $_POST ['mont'];
-			$articulo = $_POST ['arti'];
-			$modelo = $_POST ['modelo'];
-			if ($modelo == 'moto') {
-				$asunto = 'Solicitud por: (' . $tipodemoto . ' ' . $cajavelocidades . ')';
-			} elseif ($modelo == 'articulo') {
-				$asunto = 'Solicitud por: (' . $articulo . ' )';
-			} else {
-				$asunto = 'Solicitud por: (' . $monto . ' )';
-			}
-			
-			$tabla = '<table>
+	$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
+	if ( !$conexion ) {echo 'no se pudo conectar';}
+	mysql_select_db('electro4_webelectron', $conexion);
+	
+	
+	$consultar = 'SELECT * FROM validar WHERE correo=\'' . $_POST['mail'] . '\' AND estatus = \'A\'';
+	
+	
+	$rs = mysql_query($consultar, $conexion);
+	
+	
+	$fila = mysql_num_rows($rs);
+	
+	
+	
+	if($fila > 0)
+	{
+		
+		$privatekey = "6Lc4EgMTAAAAANZiORAMganplKlZdreerMw1XIBN";
+		
+		$correo = $_POST ['mail'];
+		$codigovendedor = $_POST ['cove'];
+		$tipodemoto = $_POST ['tmot'];
+		$cajavelocidades = $_POST ['cvel'];
+		$monto = $_POST ['mont'];
+		$articulo = $_POST ['arti'];
+		$modelo = $_POST ['modelo'];
+		if ($modelo == 'moto') {
+			$asunto = 'Solicitud por: (' . $tipodemoto . ' ' . $cajavelocidades . ')';
+		} elseif ($modelo == 'articulo') {
+			$asunto = 'Solicitud por: (' . $articulo . ' )';
+		} else {
+			$asunto = 'Solicitud por: (' . $monto . ' )';
+		}
+		
+		$tabla = '<table>
 			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>			
 			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>			
 			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>
@@ -37,30 +56,67 @@ if (isset ( $_POST ['mail'] )) {
 			<tr><td>Monto Solicitado:</td><td>' . $monto . '</td></tr>
 			<tr><td>Artículo:</td><td>' . $articulo . '</td></tr>
 			</table>';
-			
-			
-			$insertar = "insert into solicitud (codigovendedor, correo, tipomoto, cajavelocidades, montosolicitado, articulo) values ('$codigovendedor',
+		
+		$insertar = "insert into solicitud (codigovendedor, correo, tipomoto, cajavelocidades, montosolicitado, articulo) values ('$codigovendedor',
 			'$correo','$tipodemoto','$cajavelocidades','$monto','$articulo')";
-			
-			$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
-			if ( !$conexion ) {echo 'no se pudo conectar';}
-			mysql_select_db('electro4_webelectron', $conexion);
-			mysql_query($insertar);
-			
 		
-			//$to = 'electron465empresa@gmail.com';
-			$to = 'gesaodin@gmail.com';
-			$subject = $asunto;
-			$headers = "MIME-Version: 1.0" . "\r\n";
-			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-			$headers .= 'From: <' . $correo . '>' . "\r\n";
-			$headers .= 'Cc: electronbackup@gmail.com' . "\r\n";			
-			mail ( $to, $subject, $tabla, $headers );
-			
-			echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
+		$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
+		if (! $conexion) {
+			echo 'no se pudo conectar';
+		}
+		mysql_select_db ( 'electro4_webelectron', $conexion );
+		mysql_query ( $insertar );
+		
+		/**
+		 * //$to = 'electron465empresa@gmail.com';
+		 * $to = 'gesaodin@gmail.com';
+		 * $subject = $asunto;
+		 * $headers = "MIME-Version: 1.0" .
+		 * "\r\n";
+		 * $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		 * $headers .= 'From: <' . $correo . '>' . "\r\n";
+		 * $headers .= 'Cc: electronbackup@gmail.com' . "\r\n";
+		 * mail ( $to, $subject, $tabla, $headers );
+		 */
+		
+		$mail = new PHPMailer ();
+		
+		$body = '<body style="margin: 10px;">Prueba de Envio<br /></body>';
+		$mail->IsSMTP (); // telling the class to use SMTP
+		
+		$mail->SMTPDebug = 1;
+		$mail->Host = "smtp.gmail.com";
+		$mail->SMTPSecure = "tls";
+		$mail->SMTPAuth = true; // enable SMTP authentication
+		$mail->SMTPKeepAlive = true; // SMTP connection will not close after each email sent
+		
+		$mail->Port = 587;
+		$mail->Username = "soporteelectron465@gmail.com"; // SMTP account username
+		$mail->Password = "soporte8759"; // SMTP account password
+		
+		$mail->SetFrom ( 'soporteelectron465@gmail.com', 'Solicitud de Credito' );
+		$mail->AddReplyTo ( $correo, 'Solicitud' );
+		$mail->Subject = $asunto;
+		
+		$cuerpo = $tabla;
+		
+		$mail->AltBody = "Grupo Electron"; // optional, comment out and test
+		$mail->MsgHTML ( $cuerpo );
+		$address = "electron465empresa@gmail.com";
+		$mail->AddAddress ( $address, $_POST ['cedula'] );
+		if (! $mail->Send ()) {
+			$msj = "Error al enviar: " . $mail->ErrorInfo;
+		} else {
+			$msj = "Mensaje enviado a:  " . $address . "!";
+		}
+		
+		echo '<br><br><center><H1>Su solicitud ha sido enviada, nos comunicaremos con usted a la brevedad posible.<br><br>Gracias por su tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
-		
-
+	}else
+	{
+		echo '<br><br><center><H1>Su solicitud no ha sido procesada, por favor debe realizar su afiliación</H1><br><br>
+					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
+	}
 } else {
 	header ( 'Location: index.html' );
 }

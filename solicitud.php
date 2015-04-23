@@ -103,12 +103,13 @@ $error = null;
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">FORMULARIO</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
+                            <span class="txt_darkgrey">Recuerde que para realizar una solicitud debe estar previamente registrado a través de nuestro modulo de                            
+                            afiliar.</span><br>
                         </div>
                     </div>
 				</div>
-                  <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
+                  <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente 
+                  formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 
                       <form method="POST" action="enviarcorreo.php"> 
                       <div class="row">

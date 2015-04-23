@@ -42,25 +42,23 @@ array (
 'encoded', // use
 'Validando Afiliacion' ); // documentation
 
+
+
+
 function Afiliado($persona) {
 	global $server;
 	$ClienteExiste = 0;
 	$ValidarCuenta = '';
 	$ValidarNombre = '';
-	$Correo = '';
-		
+	$Correo = '';		
 	$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
 	if (! $conexion) {
 		echo 'no se pudo conectar';
 	}
-	mysql_select_db ( 'electro4_webelectron', $conexion );
-	
-	$consultar = 'SELECT * FROM afiliacion WHERE cedula=\'' . $persona['Cedula'] . '\'';
-	
-	$rs = mysql_query ( $consultar, $conexion );
-	
-	$fila = mysql_num_rows ( $rs );
-	
+	mysql_select_db ( 'electro4_webelectron', $conexion );	
+	$consultar = 'SELECT * FROM afiliacion WHERE cedula=\'' . $persona['Cedula'] . '\'';	
+	$rs = mysql_query ( $consultar, $conexion );	
+	$fila = mysql_num_rows ( $rs );	
 	if ($fila > 0) {
 		$ClienteExiste = 1;
 		while($afiliado = mysql_fetch_object($rs)){
@@ -69,10 +67,8 @@ function Afiliado($persona) {
 			$Correo = $afiliado->correo;
 			$ValidarCuenta = $afiliado->banco;
 		}
-	}
-	
-	$msj = 'Hola, ' . $persona ['Cedula'];
-	
+	}	
+	$msj = 'Hola, ' . $persona ['Cedula'];	
 	if (isset ( $_SERVER ['REMOTE_USER'] )) {
 		$msj .= '  Conectando ' . $_SERVER ['REMOTE_USER'] . '?';
 	}
