@@ -18,12 +18,35 @@
         <!-- Custom styles for this template -->
         <link href="js/colorbox/colorbox.css"  rel='stylesheet' type='text/css'>
         <link href="css/templatemo_style.css"  rel='stylesheet' type='text/css'>
-
+        <script src="js/jquery.min.js"></script>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
+
+
+        <script>
+        function habilitar(value)
+        {
+
+            if(value=="1" || value==true)
+            {
+                // habilitamos
+                document.getElementById("bancem").disabled=false;
+                document.forms['form']['bancem'].value = '2';
+            }else if(value=="2" || value==false){
+                // deshabilitamos
+                document.getElementById("bancem").disabled=true;
+                document.forms['form']['bancem'].value = '14';
+            }
+        }
+        
+        
+    </script>
+
+
+
     </head>
     
 
@@ -87,7 +110,7 @@
 
     <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 <div class="row">
-    <form method="POST" action="enviarreportedepago.php">
+    <form id="form" name="form" method="POST" action="enviarreportedepago.php">
 </div> 
 <div class="row">
     <div class="form-group col-md-4">
@@ -107,10 +130,10 @@
    <input required="required" name="fecha" id="fecha" type="date" class="form-control" placeholder="Fecha de Pago..." maxlength="40" />
 </div>
 <div class="form-group col-md-4">
-      <select class="selete" name="tpago" id="tpago" style="width: 100%;">
-            <option selected>Tipo de Pago...</option>
-            <option>Transferencia</option>
-            <option>Depósito</option>                                       
+      <select class="selete" name="tpago" id="tpago" style="width: 100%;" onchange="habilitar(this.value);">
+            <option selected value="1">Tipo de Pago...</option>
+            <option value="1">Transferencia</option>
+            <option value="2">Depósito</option>                                       
         </select>
         </div>
 <div class="form-group col-md-4">
@@ -121,21 +144,22 @@
 <div class="row">
 
 <div class="form-group col-md-4">
-      <select class="selete" name="bancem" id="bancem" style="width: 100%;">
-        <option selected>Banco Emisor...</option>
-       					        <option>BICENTENARIO</option>
-                                <option>BOD</option>
-                                <option>PROVINCIAL</option>
-                                <option>VENEZUELA</option>
-                                <option>BANESCO</option> 
-                                <option>INDUSTRIAL</option>
-                                <option>FONDO COMUN</option>
-                                <option>100% BANCO COMERCIAL</option>
-                                <option>SOFITASA</option> 
-                                <option>DEL SUR</option>
-                                <option>CARONI</option>
-                                <option>CARIBE</option>
-                                <option>MERCANTIL</option>                                     
+      <select class="selete" name="bancem" id="bancem" style="width: 100%;" >
+        <option value="2">Banco Emisor...</option>
+       					        <option value="1">BICENTENARIO</option>
+                                <option value="2">BOD</option>
+                                <option value="3">PROVINCIAL</option>
+                                <option value="4">VENEZUELA</option>
+                                <option value="5">BANESCO</option> 
+                                <option value="6">INDUSTRIAL</option>
+                                <option value="7">FONDO COMUN</option>
+                                <option value="8">100% BANCO COMERCIAL</option>
+                                <option value="9">SOFITASA</option> 
+                                <option value="10">DEL SUR</option>
+                                <option value="11">CARONI</option>
+                                <option value="12">CARIBE</option>
+                                <option value="13">MERCANTIL</option> 
+                                <option value="14">Por Cliente.</option>                                    
         </select>
 </div>
 <div class="form-group col-md-4">

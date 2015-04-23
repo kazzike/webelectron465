@@ -115,7 +115,7 @@ if (isset ( $_POST ['cedu'] )) {
 	    
 	$mail->Port          = 587;    
 	$mail->Username      = "soporteelectron465@gmail.com"; // SMTP account username
-	$mail->Password      = "soporte8759";        // SMTP account password
+	$mail->Password      = "";        // SMTP account password
 
 	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Afiliacion al Cliente');
 	$mail->AddReplyTo('soporteelectron465@gmail.com', 'Solicitud Afiliacion');
@@ -135,8 +135,8 @@ if (isset ( $_POST ['cedu'] )) {
 
 			
 			echo '<br><br><center><H1>Su afiliacion ha sido procesada.
-							Por favor has click en el enlace que enviamos a tu correo ' . $correo . ', a fines de verificar su cuenta
-							<br><br>Gracias por su tiempo</H1><br><br>
+							Por favor haz click en el enlace que enviamos a tu correo ' . $correo . ', para realizar la activacion de tu cuenta.
+							<br><br>Gracias por tu tiempo</H1><br><br>
 					<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 			if(!$mail->Send()) {
 	  return "Error al enviar: " . $mail->ErrorInfo;

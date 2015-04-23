@@ -72,7 +72,7 @@ if(isset($_GET['v'])){
 				5.- Original Certificación de Cuenta Bancaria (Estado Cuenta Firmado por el Banco). <br>
 				6.- Original de la Constancia de Trabajo Con Sello Húmedo o Seco Vigente.<br>
 				7.- Contrato de Servicios ( Firmarlo y colocar huella dactilar del pulgar derecho e izquierdo) 
-				Puede descargar el Documento en PDF a traves del siguiente enlace<a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Contrato Afiliacion</a>
+				Puede descargar el Documento en PDF a traves del siguiente enlace: <a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Contrato Afiliacion</a>
 				<br>
 				Todos estos recaudos deben colocarse en una carpeta amarilla tamaño oficio, sin grapas, tachaduras, 
 				enmiendas, u orificios y dicha carpeta debe ir en un sobre manila tamaño oficio para ser enviado a 
