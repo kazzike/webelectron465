@@ -34,6 +34,7 @@
             {
                 // habilitamos
                 document.getElementById("bancem").disabled=false;
+                document.forms['form']['bancem'].value = '2';
             }else if(value=="2" || value==false){
                 // deshabilitamos
                 document.getElementById("bancem").disabled=true;
@@ -130,7 +131,7 @@
 </div>
 <div class="form-group col-md-4">
       <select class="selete" name="tpago" id="tpago" style="width: 100%;" onchange="habilitar(this.value);">
-            <option selected>Tipo de Pago...</option>
+            <option selected value="1">Tipo de Pago...</option>
             <option value="1">Transferencia</option>
             <option value="2">Depósito</option>                                       
         </select>
