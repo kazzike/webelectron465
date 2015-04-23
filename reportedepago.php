@@ -24,6 +24,23 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
+
+
+        <script>
+        function habilitar(value)
+        {
+            if(value=="1" || value==true)
+            {
+                // habilitamos
+                document.getElementById("bancem").disabled=false;
+            }else if(value=="2" || value==false){
+                // deshabilitamos
+                document.getElementById("bancem").disabled=true;
+            }
+        }
+    </script>
+
+
     </head>
     
 
@@ -107,10 +124,10 @@
    <input required="required" name="fecha" id="fecha" type="date" class="form-control" placeholder="Fecha de Pago..." maxlength="40" />
 </div>
 <div class="form-group col-md-4">
-      <select class="selete" name="tpago" id="tpago" style="width: 100%;">
+      <select class="selete" name="tpago" id="tpago" style="width: 100%;" onchange="habilitar(this.value);">
             <option selected>Tipo de Pago...</option>
-            <option>Transferencia</option>
-            <option>Depósito</option>                                       
+            <option value="1">Transferencia</option>
+            <option value="2">Depósito</option>                                       
         </select>
         </div>
 <div class="form-group col-md-4">
@@ -121,8 +138,8 @@
 <div class="row">
 
 <div class="form-group col-md-4">
-      <select class="selete" name="bancem" id="bancem" style="width: 100%;">
-        <option selected>Banco Emisor...</option>
+      <select class="selete" name="bancem" id="bancem" style="width: 100%;" >
+        <option selected value="2">Banco Emisor...</option>
        					        <option>BICENTENARIO</option>
                                 <option>BOD</option>
                                 <option>PROVINCIAL</option>
