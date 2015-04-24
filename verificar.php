@@ -55,28 +55,28 @@ if(isset($_GET['v'])){
 	    
 		$cuerpo = "				
 			<br>
-			Saludos estimado cliente y próximo afiliado de nuestra gran familia Electrón.
+			Saludos estimado cliente y próximo afiliado de nuestra gran familia Electron.
 			<br><br>
-			En Electrón 465 trabajamos para construir relaciones duraderas con nuestros clientes y 
-			aportar el máximo valor posible, tanto a nuestros clientes como a la sociedad. El objetivo que 
-			nos hemos planteado es que en cada uno de los contactos que mantenemos con nuestros clientes se 
-			les transmita una experiencia que haga la diferencia para una relacion duradera, y de compromiso, 
-			mejorando e innovando cada día.
+			En Electron 465 trabajamos para construir relaciones duraderas con nuestros clientes y 
+			aportar el maximo valor posible, tanto a nuestros clientes como a la sociedad. El objetivo que 
+			nos hemos planteado es que en cada uno de los contactos que mantenemos se 
+			transmita una experiencia que haga la diferencia para una relacion duradera, y de compromiso, 
+			mejorando e innovando cada dia.
 			<br><br>
-			Para continuar con el proceso de afiliación debe consignar los siguientes requisitos:
+			Para continuar con el proceso de afiliacion debe consignar los siguientes recaudos:
 			<br><br>
-				1.- Copia de la Cédula de Identidad Vigente.<br>
+				1.- Copia de la Cedula de Identidad Vigente.<br>
 				2.- Copia de Rif Actualizado.<br>
-				3.- Original del Recibo de Pago.<br>
-				4.- Copia de la Libreta Actualizada (Donde se pueda visualizar el número de cuenta).<br>
-				5.- Original Certificación de Cuenta Bancaria (Estado Cuenta Firmado por el Banco). <br>
-				6.- Original de la Constancia de Trabajo Con Sello Húmedo o Seco Vigente.<br>
-				7.- Contrato de Servicios ( Firmarlo y colocar huella dactilar del pulgar derecho e izquierdo) 
+				3.- Una (1) Foto Tipo Carnet <br>
+				4.- Original del Recibo de Pago.<br>
+				5.- Copia de la Libreta Actualizada (Donde se pueda visualizar el numero de cuenta).<br>
+				6.- Original Certificacion de Cuenta Bancaria (Estado Cuenta Firmado por el Banco). <br>
+				7.- Original de la Constancia de Trabajo donde se especifique el sueldo, con Sello Humedo o Seco Vigente.<br>
+				8.- Contrato de Servicios ( Leerlo, Firmarlo y colocar huella dactilar del pulgar derecho e izquierdo) 
 				Puede descargar el Documento en PDF a traves del siguiente enlace: <a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Contrato Afiliacion</a>
 				<br>
-				Todos estos recaudos deben colocarse en una carpeta amarilla tamaño oficio, sin grapas, tachaduras, 
-				enmiendas, u orificios y dicha carpeta debe ir en un sobre manila tamaño oficio para ser enviado a 
-				traves de MRW a la Oficina Ubicada en el estado Merida Código Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
+				Todos estos recaudos deben colocarse en un sobre manila tamaño oficio, sin grapas, tachaduras, 
+				enmiendas, u orificios y enviarlos a traves de MRW a la Oficina Ubicada en el estado Merida Codigo de Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
 				P,B. LOCAL MRW a nombre de GRUPO ELECTRON 465 C.A. RIF J-29837846-8 Teléfono: 0274 - 251 22 60
 				<br><br>
 				Una vez recibidos los recaudos, nos comunicaremos con usted via correo electronico 
