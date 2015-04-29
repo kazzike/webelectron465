@@ -71,12 +71,11 @@ $error = null;
                         </div>
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="index.html">INICIO</a></li>
-                                <li><a href="">LA EMPRESA</a></li>                                          
-                                <li><a href="">CONTACTO</a></li>
-                               <!--  <li><a href="#templatemo-about">SUCURSALES</a></li> -->
-                                
-                            </ul>
+                             <li><a href="index.html">PAGINA PRINCIPAL</a></li>
+                            <!--  <li><a href="#templatemo-blog">LA EMPRESA</a></li>                                          
+                             <li><a href="#templatemo-contact"></a></li>    -->                          
+                              <li><a href="prefec.html">PREGUNTAS FRECUENTES</a></li> 
+                         </ul>
                         </div><!--/.nav-collapse -->
                     </div><!--/.container-fluid -->
                 </div><!--/.navbar -->
@@ -103,24 +102,24 @@ $error = null;
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
-                            <span class="txt_darkgrey">Recuerde que para realizar una solicitud debe estar previamente registrado a través de nuestro modulo de                            
-                            afiliar.</span><br>
+                            <span class="txt_darkgrey">Recuerda que para que tu solicitud sea procesada por el sistema debes estar registrado a través del modulo de                            
+                            afiliación en la página principal y haber confirmado tu correo eléctronico.</span><br>
                         </div>
                     </div>
 				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente 
-                  formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
+                  formulario, con los datos que se piden.</i></p> 
+
+                  <p class="txt_slogan" align="justify"><i>Si no conoces el código de vendedor puedes dejar ese espacio en blanco.</i></p> <p>&nbsp;</p>
 
                       <form method="POST" action="enviarcorreo.php"> 
                       <div class="row">
                           
-                          <div class="form-group col-md-4">
+                          <div class="form-group col-md-6">
                                     <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="160" />
                           </div>
-                    </div>                                                            
-                     
-                    <div class="row">
-                        <div class="form-group col-md-3">
+                   
+                        <div class="form-group col-md-6">
                             <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
                         </div>
                     </div>
