@@ -57,12 +57,7 @@ if(isset($_GET['v'])){
 			<br>
 			Saludos estimado cliente y próximo afiliado de nuestra gran familia Electron.
 			<br><br>
-			En Electron 465 trabajamos para construir relaciones duraderas con nuestros clientes y 
-			aportar el maximo valor posible, tanto a nuestros clientes como a la sociedad. El objetivo que 
-			nos hemos planteado es que en cada uno de los contactos que mantenemos se 
-			transmita una experiencia que haga la diferencia para una relacion duradera, y de compromiso, 
-			mejorando e innovando cada dia.
-			<br><br>
+			
 			Para continuar con el proceso de afiliacion debe consignar los siguientes recaudos:
 			<br><br>
 				1.- Copia de la Cedula de Identidad Vigente.<br>
@@ -78,10 +73,11 @@ if(isset($_GET['v'])){
 				Todos estos recaudos deben colocarse en un sobre manila tamaño oficio, sin grapas, tachaduras, 
 				enmiendas, u orificios y enviarlos a traves de MRW a la Oficina Ubicada en el estado Merida Codigo de Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
 				P,B. LOCAL MRW a nombre de GRUPO ELECTRON 465 C.A. RIF J-29837846-8 Teléfono: 0274 - 251 22 60
-				<br><br>
-				Una vez recibidos los recaudos, nos comunicaremos con usted via correo electronico 
-				para asignarle su usuario y contraseña para acceder al sistema de solicitudes.<br><br>";
-			
+				<br>
+				Una vez recibidos los recaudos, nuestros analistas de ventas procederan a revisarlos y le contactaran para proceder con su financiamiento.<br>
+				<br>
+				Desde este momento puedes realizar la solicitud del producto que desees, ARTICULOS VARIOS - LIBRE INVERSION - MOTOCICLETAS a traves de nuestro sitio web www.electron465.com ";
+
 	  $mail->AltBody    = "Texto Alternativo"; // optional, comment out and test
 	  $mail->MsgHTML($cuerpo);
 		$address = $_GET['c'];	
@@ -95,8 +91,8 @@ if(isset($_GET['v'])){
 		$consultar = "UPDATE validar SET estatus='A' WHERE codigo='" . $_GET['v'] . "' LIMIT 1";
 		mysql_query($consultar);
 
-		echo '<br><br><center><H1>Su afiliacion ha sido procesada.
-			Por favor haz click en el enlace que enviamos a tu correo ' . $_GET['c'] . ', a fines de verificar su correo electronico
+		echo '<br><br><center><H1>Tu correo ha sido verificado. <br>
+			Ahora puedes ingresar a tu correo electronico, el sistema te ha enviado los pasos a seguir para completar el proceso.-
 			<br><br>Gracias por tu tiempo</H1><br><br>
 			<a href="index.html" class="btn btn-orange">Regresar a la Página Principal</a></center>';
 

@@ -98,7 +98,7 @@ if (isset ( $_POST ['cedu'] )) {
 			mysql_query($insertar);
 			
 			//Enviando correo al cliente
-			$ruta = "Sigue el siguiente enlace <a href='http://electron465.com/verificar.php?v=$md5correo&c=$correo&t=sis-electron'>Verificar Correo electronico</a>";
+			$ruta = "Sigue el siguiente enlace para<a href='http://electron465.com/verificar.php?v=$md5correo&c=$correo&t=sis-electron'> Verificar Correo electronico</a>";
 
 
 	$mail = new PHPMailer();
@@ -115,7 +115,7 @@ if (isset ( $_POST ['cedu'] )) {
 	    
 	$mail->Port          = 587;    
 	$mail->Username      = "soporteelectron465@gmail.com"; // SMTP account username
-	$mail->Password      = "";        // SMTP account password
+	$mail->Password      = "soporte8759";        // SMTP account password
 
 	$mail->SetFrom('soporteelectron465@gmail.com', 'Departamento de Afiliacion al Cliente');
 	$mail->AddReplyTo('soporteelectron465@gmail.com', 'Solicitud Afiliacion');

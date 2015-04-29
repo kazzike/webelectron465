@@ -188,6 +188,7 @@ echo ' <div class="row">
                                     <option>Nevera</option>
                                     <option>Cocina</option>
                                     <option>Lavadora</option>
+                                    <option>Equipo de Sonido</option>
                                     <option>Aire Acondicionado</option>
                                 </select>
                             </div> 
