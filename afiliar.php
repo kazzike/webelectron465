@@ -88,7 +88,7 @@ $error = null;
             <div class="container">
                 <div class="templatemo-slogan text-center">
                     <span class="txt_darkgrey">Bienvenido a </span><span class="txt_orange">Electron 465</span>
-                    <p class="txt_slogan"><i>Descubra todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
+                    <p class="txt_slogan"><i>Descubre todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
                 </div>	
             </div>
         </div>
@@ -103,8 +103,8 @@ $error = null;
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
                         <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">FORMULARIO DE AFILIACI&Oacute;N</span>
-                            <hr class="team_hr team_hr_right hr_gray"/>
+                            <hr class="team_hr  hr_gray"/><span class="txt_darkgrey">FORMULARIO DE AFILIACI&Oacute;N</span>
+                            <hr class="team_hr  hr_gray"/>
                         </div>
                     </div>
 				</div>
