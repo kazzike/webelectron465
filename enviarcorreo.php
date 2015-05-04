@@ -35,6 +35,7 @@ if (isset ( $_POST ['mail'] )) {
 		
 		$correo = $_POST ['mail'];
 		$codigovendedor = $_POST ['cove'];
+		$cedula = $_POST ['ced'];		
 		$tipodemoto = $_POST ['tmot'];
 		$cajavelocidades = $_POST ['cvel'];
 		$monto = $_POST ['mont'];
@@ -49,6 +50,7 @@ if (isset ( $_POST ['mail'] )) {
 		}
 		
 		$tabla = '<table>
+			<tr><td>Cédula del Cliente:</td><td>' . $cedula . '</td></tr>
 			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>			
 			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>			
 			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>

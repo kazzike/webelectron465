@@ -114,14 +114,18 @@ $error = null;
 
                       <form method="POST" action="enviarcorreo.php"> 
                       <div class="row">
+                        <div class="form-group col-md-4">
+                            <input  name="ced" id="ced" type="" class="form-control" placeholder="Cedula del Cliente..." maxlength="40" />
+                        </div>
                           
-                          <div class="form-group col-md-6">
+                          <div class="form-group col-md-4">
                                     <input required="required" name="mail" id="mail" type="email" class="form-control" placeholder="¿Cual es tu Correo Electronico?..." maxlength="160" />
                           </div>
                    
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
                         </div>
+                        
                     </div>
 
                     <!-- MOTOS-->
