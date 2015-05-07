@@ -88,7 +88,7 @@ $error = null;
             <div class="container">
                 <div class="templatemo-slogan text-center">
                     <span class="txt_darkgrey">Bienvenido a </span><span class="txt_orange">Electron 465</span>
-                    <p class="txt_slogan"><i>Descubre todos nuestros planes de financiamiento para solicitarlos en línea.</i></p>
+                    <p class="txt_slogan"><i>Descubre todos nuestros planes de créditos para solicitarlos en línea.</i></p>
                 </div>	
             </div>
         </div>
@@ -109,6 +109,7 @@ $error = null;
                     </div>
 				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
+				  <p class="txt_slogan" align="justify"><i>Si no conoces el numero de contrato o numero de vendedor deja esos espacios en blanco.</i></p> <p>&nbsp;</p>
 
                        <div class="row">
 						 <form method="POST" action="registrar_afiliacion.php">
@@ -261,18 +262,20 @@ $error = null;
                         </div>
                         </div>
                     <div class="row">
-                        <div class="form-group col-md-3">
-                            <input name="bbms" id="bbms" type="" class="form-control" placeholder="Tu PIN de BBMSN..." maxlength="40" />
-                        </div>
+                   
                          <div class="form-group col-md-3">
                             <input  name="twit" id="twit" type="" class="form-control" placeholder="Tu Usuario de Twitter..." maxlength="40" />
                         </div>
                          <div class="form-group col-md-3">
                             <input  name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
                         </div>
+                                <div class="form-group col-md-3">
+                            <input name="bbms" id="bbms" type="" class="form-control" placeholder="Número de Contrato..." maxlength="40" />
+                        </div>
                         <div class="form-group col-md-3">
                             <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
                         </div>
+
                     </div>
 
  
