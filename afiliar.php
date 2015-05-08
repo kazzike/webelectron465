@@ -10,6 +10,11 @@ $publickey = "6Lc4EgMTAAAAAFe1JflPGIDYjkMeRXOJKjiiTOsi";
 # the error code from reCAPTCHA, if any
 $error = null;
 
+$codigo = '';
+if(isset($_POST['code'])){
+	$codigo = $_POST['code'];
+}
+
 ?>
 
 
@@ -109,7 +114,8 @@ $error = null;
                     </div>
 				</div>
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
-				  <p class="txt_slogan" align="justify"><i>Si no conoces el numero de contrato o numero de vendedor deja esos espacios en blanco.</i></p> <p>&nbsp;</p>
+				  <p class="txt_slogan" align="justify"><i><font color='black'>				  
+				  Si no conoces el numero de contrato o numero de vendedor deja esos espacios en blanco.</font></i></p> <p>&nbsp;</p>
 
                        <div class="row">
 						 <form method="POST" action="registrar_afiliacion.php">
@@ -270,10 +276,10 @@ $error = null;
                             <input  name="face" id="face" type="" class="form-control" placeholder="Tu Usuario de Facebook..." maxlength="40" />
                         </div>
                                 <div class="form-group col-md-3">
-                            <input name="bbms" id="bbms" type="" class="form-control" placeholder="Número de Contrato..." maxlength="40" />
+                            <input name="bbms" id="bbms" type="text" class="form-control" placeholder="Número de Contrato..." maxlength="40" />
                         </div>
                         <div class="form-group col-md-3">
-                            <input  name="cove" id="cove" type="" class="form-control" placeholder="Código de Vendedor..." maxlength="40" />
+                            <input  name="cove" id="cove" type="text" class="form-control" placeholder="Código de Vendedor..." maxlength="40" value="<?php echo $codigo?>" readonly="readonly"/>
                         </div>
 
                     </div>
