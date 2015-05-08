@@ -71,7 +71,8 @@ if(isset($_GET['v'])){
 				Puede descargar el Documento en PDF a traves del siguiente enlace: <a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Contrato Afiliacion</a>
 				<br>
 				Todos estos recaudos deben colocarse en un sobre manila tamaño oficio, sin grapas, tachaduras, 
-				enmiendas, u orificios y enviarlos a traves de MRW a la Oficina Ubicada en el estado Merida Codigo de Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
+				enmiendas, u orificios y enviarlos a traves de Nuestro Casillero Gratuito en Grupo Zoom, Identificado de la siguiente manera: MRD - 381219 a Nombre de Grupo Electron 465 (debe asegurarse de identificar correctamente y legible el sobre con este codigo).
+				Igualmente puede enviarlos a traves de MRW a la Oficina Ubicada en el estado Merida Codigo de Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
 				P,B. LOCAL MRW a nombre de GRUPO ELECTRON 465 C.A. RIF J-29837846-8 Teléfono: 0274 - 251 22 60
 				<br>
 				Una vez recibidos los recaudos, nuestros analistas de ventas procederan a revisarlos y le contactaran para proceder con su financiamiento.<br>
