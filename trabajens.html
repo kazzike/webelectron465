@@ -96,13 +96,13 @@
                   <p class="txt_slogan" align="justify"><i>Para atenderte con un servicio de calidad, debes rellenar cuidadosamente el siguiente formulario, con los datos que se piden.</i></p> <p>&nbsp;</p>
 
                        <div class="row">
-						 <form method="POST" action="registrar_afiliacion.php">
+						 <form method="POST" action="registrar_curriculum.php" enctype="multipart/form-data" >
                             <div class="form-group col-md-4">
 								<select class="selete" name="naci" id="naci" style="width: 100%;">
 									<option selected>Documento Identidad</option>
-                                    <option>Venezolano</option>
-									<option>Extranjero</option>
-									<option>R.I.F.</option>
+                                    <option value="V">Venezolano</option>
+									<option value="E">Extranjero</option>
+									<option value="J">R.I.F.</option>
 								</select>
 						    </div>
 
@@ -113,9 +113,9 @@
                       <div class="form-group col-md-4">
                                 <select class="selete" name="gene" id="gene" style="width: 100%;">
                                     <option selected>Tu Género</option>
-                                    <option>Masculino</option>
-                                    <option>Femenino</option>
-                                    <option>Otro</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="O">Otro</option>
                                 </select>
                       </div> 
                       </div> 
@@ -184,10 +184,10 @@
                         <input required="required" name="ncel" id="ncel" type="" class="form-control" placeholder="Tú número de celular..." maxlength="40" />
                       </div>
                       <div class="form-group col-md-4">
-                                <select class="selete" name="cmapl" id="campl" style="width: 100%;">
+                                <select class="selete" name="clt" id="clt" style="width: 100%;">
                                     <option selected>En que campo laboral quieres Trabajar...</option>
-                                    <option>Administrativo</option>
-                                    <option>Vendedor</option>
+                                    <option value="A">Administrativo</option>
+                                    <option value="V">Vendedor</option>
                                 </select>
                             </div> 
                   
@@ -200,14 +200,14 @@
                                <h5>Adjunta tu currículum:</h5>
                             </div> 
                             <div class="form-group col-md-4">
-                               <input type="file" name="curriculum" id="curriculum" class="form-control"/>
+                               <input type="file" name="curri" id="curri" class="form-control"/>
 							  
                             </div>  
                                              
                      </div>
                      <div class="row">
                             <div class="form-group col-md-12">
-   							<textarea name="present" rows="10" class="form-control" cols="50" placeholder="Presentacion..."></textarea>
+   							<textarea name="present" id="prese" rows="10" class="form-control" cols="50" placeholder="Presentacion..."></textarea>
                             </div>  
                      </div>
                    
