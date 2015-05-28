@@ -71,10 +71,10 @@ if (isset ( $_POST ['cedu'] )) {
 	
 	$insertar = "INSERT IGNORE INTO curriculum (nac, ci, gen, pnombre, snombre, papellido, 
 							sapellido, direc, esta, ciud , 
-					email, ncasa, ntlf , trabj, fechan , present) 
+					email, ncasa, ntlf , trabj, fechan , present, archi) 
 					VALUES ('" . $nacionalidad . "','" . $cedula . "','" . $genero . "','" . $primernombre . "',
 							'" . $segundonombre . "','" . $primerapellido . "','" . $segundoapellido . "', '" . $direccion . "', '" . $estado . "', '". $ciudad ."',
-							'" . $correo . "', '" . $numerodecasa . "','" . $numerocelular . "','" . $trabajar . "','" . $fechan . "','" . $present . "')";
+							'" . $correo . "', '" . $numerodecasa . "','" . $numerocelular . "','" . $trabajar . "','" . $fechan . "','" . $present . "','" . $_FILES['curri']['name'] . "')";
 	
 	//echo $insertar;
 	//$conexion = mysql_connect ( 'localhost', 'root', 'za63qj2p' );
@@ -82,8 +82,8 @@ if (isset ( $_POST ['cedu'] )) {
 	if (! $conexion) {
 		echo 'no se pudo conectar';
 	}
-	// mysql_select_db ( 'electro4_webelectron', $conexion );
-	mysql_select_db ( 'webelectron', $conexion );
+	mysql_select_db ( 'electro4_webelectron', $conexion );
+	//mysql_select_db ( 'webelectron', $conexion );
 	mysql_query ( $insertar );
 	// echo $insertar;
 	
@@ -91,7 +91,14 @@ if (isset ( $_POST ['cedu'] )) {
 	$tiempo = date ( "Y/m/d" );
 	
 	// Enviando correo al cliente
-	$ruta = "Su registro fue procesado exitosamente nos pondremos en contacto con usted a la brevedad posible.";
+	$ruta = "Bienvenido(a).
+             <br><br>
+			La Familia Electron le  agradece su interés por ingresar a nuestra base de datos, la cual le ofrece la posibilidad de ser considerado(a) para 
+			formar parte del desarrollo en cualquiera de nuestras empresas u oficinas.
+		    <br><br>
+			Recuerde que es muy importante que revise periódicamente su buzón electrónico de mensajes, pues a través de esa vía nos pondremos en contacto
+			con usted en caso de que deseemos concretar una relación mas cercana. 			
+			";
 	
 	$mail = new PHPMailer ();
 	
@@ -110,7 +117,7 @@ if (isset ( $_POST ['cedu'] )) {
 	$mail->SetFrom ( 'soporteelectron465@gmail.com', 'Departamento de RRHH' );
 	$mail->AddReplyTo ( 'soporteelectron465@gmail.com', 'Solicitud Curriculum' );
 	$mail->Subject = 'Curriculum Vitae Electron 465';
-	$cuerpo = $ruta;
+	$cuerpo = '<br>' . $ruta;
 	$mail->AltBody = "Texto Alternativo"; // optional, comment out and test
 	$mail->MsgHTML ( $cuerpo );
 	$address = $correo;
