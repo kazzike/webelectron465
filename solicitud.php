@@ -169,6 +169,7 @@ echo '       <div class="row">
                                     <option>20.000 Bs.</option>
                                     <option>25.000 Bs.</option> 
                                     <option>30.000 Bs.</option>
+									<option>50.000 Bs.</option>
                                 </select>
                             </div> 
                     </div>  '; 

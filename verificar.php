@@ -70,6 +70,11 @@ if(isset($_GET['v'])){
 				8.- Contrato de Servicios ( Leerlo, Firmarlo y colocar huella dactilar del pulgar derecho e izquierdo) 
 				Puede descargar el Documento en PDF a traves del siguiente enlace: <a href='http://www.electron465.com/afiliacion/afiliacion.pdf'>Contrato Afiliacion</a>
 				<br>
+				9.- Formato de domiciliacion Forma (1) Imprimir tamaño carta por ambas caras firmar y colocar huella dactictilar.
+				Puede descargar el Documento en PDF a traves del siguiente enlace <a href='http://www.electron465.com/afiliacion/form1.pdf'>Forma (1)</a>
+				<br>
+				10.- Formato de domiciliacion Forma (2) Imprimir tamaño carta firmar y colocar huella dactictilar.
+				Puede descargar el Documento en PDF a traves del siguiente enlace <a href='http://www.electron465.com/afiliacion/form2.pdf'>Forma (2)</a><br>
 				Todos estos recaudos deben colocarse en un sobre manila tamaño oficio, sin grapas, tachaduras, 
 				enmiendas, u orificios y enviarlos a traves de MRW a la Oficina Ubicada en el estado Merida Codigo de Agencia: 1401000 Dirección: AV. PASEO DE LA FERIA, EDIF. RES. EL PASEO, 
 				P,B. LOCAL MRW a nombre de GRUPO ELECTRON 465 C.A. RIF J-29837846-8 Teléfono: 0274 - 251 22 60

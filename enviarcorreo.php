@@ -13,9 +13,11 @@ require_once ("inc/PHPMail/class.phpmailer.php");
 
 if (isset ( $_POST ['mail'] )) {
 	
-	$conexion=mysql_connect('localhost', 'electro4_electro', 'p13=3e8lxTTB');
-	if ( !$conexion ) {echo 'no se pudo conectar';}
-	mysql_select_db('electro4_webelectron', $conexion);
+	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
+	if (! $conexion) {
+		echo 'no se pudo conectar';
+	}
+	mysql_select_db ( 'electro4_webelectron', $conexion );
 	
 	
 	$consultar = 'SELECT * FROM validar WHERE correo=\'' . $_POST['mail'] . '\' AND estatus = \'A\'';
@@ -105,7 +107,18 @@ if (isset ( $_POST ['mail'] )) {
 		$mail->AltBody = "Grupo Electron"; // optional, comment out and test
 		$mail->MsgHTML ( $cuerpo );
 		$address = "electron465empresa@gmail.com";
+		
 		$mail->AddAddress ( $address, $_POST ['cedula'] );
+		$mail->addBcc($address);
+		if (! $mail->Send ()) {
+			$msj = "Error al enviar: " . $mail->ErrorInfo;
+		} else {
+			$msj = "Mensaje enviado a:  " . $address . "!";
+		}
+		$address = "solicitudeselectron@gmail.com";
+		
+		$mail->AddAddress ( $address, $_POST ['cedula'] );
+		$mail->addBcc($address);
 		if (! $mail->Send ()) {
 			$msj = "Error al enviar: " . $mail->ErrorInfo;
 		} else {
