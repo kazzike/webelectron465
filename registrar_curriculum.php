@@ -34,18 +34,18 @@ if (isset ( $_POST ['cedu'] )) {
 	
 	
 	
-	$uploaddir = '/var/www/webelectron465/curriculum/';
+	$uploaddir = '/home/electro4/public_html/curriculum/';
 	$uploadfile = $uploaddir . basename($_FILES['curri']['name']);
 	
-	echo '<pre>';
-	if (copy($_FILES['curri']['tmp_name'], $uploadfile)) {
-		echo "El archivo es válido y fue cargado exitosamente.\n";
+	//echo '<pre>'.$uploadfile;
+	if (move_uploaded_file($_FILES['curri']['tmp_name'], $uploadfile)) {
+	//	echo "El archivo es válido y fue cargado exitosamente.\n";
 	} else {
 		echo "¡Posible ataque de carga de archivos!\n";
 	}
 	
-	echo 'Aquí hay más información de depurado:';
-	print_r($_FILES);
+	//echo 'Aquí hay más información de depurado:';
+	//print_r($_FILES);
 	
 	print "</pre>";
 	
@@ -76,9 +76,9 @@ if (isset ( $_POST ['cedu'] )) {
 							'" . $segundonombre . "','" . $primerapellido . "','" . $segundoapellido . "', '" . $direccion . "', '" . $estado . "', '". $ciudad ."',
 							'" . $correo . "', '" . $numerodecasa . "','" . $numerocelular . "','" . $trabajar . "','" . $fechan . "','" . $present . "')";
 	
-	echo $insertar;
-	$conexion = mysql_connect ( 'localhost', 'root', 'za63qj2p' );
-	// $conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
+	//echo $insertar;
+	//$conexion = mysql_connect ( 'localhost', 'root', 'za63qj2p' );
+	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
 	if (! $conexion) {
 		echo 'no se pudo conectar';
 	}
@@ -91,7 +91,7 @@ if (isset ( $_POST ['cedu'] )) {
 	$tiempo = date ( "Y/m/d" );
 	
 	// Enviando correo al cliente
-	$ruta = "Sigue el siguiente enlace para<a href='http://electron465.com/verificar.php?v=$md5correo&c=$correo&t=sis-electron'> Verificar Correo electronico</a>";
+	$ruta = "Su registro fue procesado exitosamente nos pondremos en contacto con usted a la brevedad posible.";
 	
 	$mail = new PHPMailer ();
 	
