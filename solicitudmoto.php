@@ -36,9 +36,9 @@ if (isset ( $_POST ['ced'] )) {
 	$insertar = "INSERT IGNORE INTO solicitudmoto (ced, mail, cove, tipomoto) 
 					VALUES ('" . $cedula . "', '" . $correo . "', '" . $codigovendedor . "','" . $tipomoto . "')";
 	
-	echo $insertar;
-	$conexion = mysql_connect ( 'localhost', 'root', '' );
-	//$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
+	//echo $insertar;
+	//$conexion = mysql_connect ( 'localhost', 'root', '' );
+	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
 	if (! $conexion) {
 		echo 'no se pudo conectar';
 	}
@@ -75,8 +75,6 @@ if (isset ( $_POST ['ced'] )) {
 	$mail->Username = "soporteelectron465@gmail.com"; // SMTP account username
 	$mail->Password = "soporte8759"; // SMTP account password
 	$mail->SetFrom ( 'soporteelectron465@gmail.com', 'Departamento de RRHH' );
-	$mail->AddReplyTo ( 'soporteelectron465@gmail.com', 'Solicitud Curriculum' );
-	$mail->Subject = 'Curriculum Vitae Electron 465';
 	$cuerpo = '<br>' . $ruta;
 	$mail->AltBody = "Texto Alternativo"; // optional, comment out and test
 	$mail->MsgHTML ( $cuerpo );
