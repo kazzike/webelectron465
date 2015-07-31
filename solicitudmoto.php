@@ -36,7 +36,7 @@ if (isset ( $_POST ['ced'] )) {
 	$insertar = "INSERT IGNORE INTO solicitudmoto (ced, mail, cove, tipomoto) 
 					VALUES ('" . $cedula . "', '" . $correo . "', '" . $codigovendedor . "','" . $tipomoto . "')";
 	
-	//echo $insertar;
+	//echo $insertar; 
 	//$conexion = mysql_connect ( 'localhost', 'root', '' );
 	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
 	if (! $conexion) {
