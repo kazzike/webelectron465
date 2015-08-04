@@ -17,29 +17,46 @@ if (isset ( $_POST ['cedu'] )) {
 	
 	$nacionalidad = $_POST ['naci'];
 	$cedula = $_POST ['cedu'];
-	$genero = $_POST ['gene'];
 	$primernombre = $_POST ['pnom'];
-	$segundonombre = $_POST ['snom'];
 	$primerapellido = $_POST ['pape'];
-	$segundoapellido = $_POST ['sape'];
 	$direccion = $_POST ['dire'];
 	$estado = $_POST ['esta'];
 	$ciudad = $_POST ['ciud'];
 	$correo = $_POST ['mail'];
 	$numerodecasa = $_POST ['ncas'];
 	$numerocelular = $_POST ['ncel'];
-	$trabajar = $_POST ['clt'];
-	$fechan = $_POST ['fechan'];
-	$present = $_POST ['present'];
+	$tipodemoto = $_POST ['tipomoto'];
+	$modelodemoto =$_POST ['mdmoto'];
+	$marcademoto= $_POST ['mrmoto'];
+	$kilometraje= $_POST ['klmoto'];
+	$colordemoto= $_POST ['clmoto'];
+	$anomoto= $_POST ['anomoto'];
+	$present= $_POST ['present'];
 	
-	
-	
-	$uploaddir = '/home/electro4/public_html/curriculum/';
-	//$uploaddir = '/var/www/html/webelectron465/curriculum/';
-	$uploadfile = $uploaddir . basename($_FILES['curri']['name']);
+	$uploaddir = '/home/electro4/public_html/motos/';
+	//$uploaddir = '/var/www/html/webelectron465/motos/';
+	$uploadfile = $uploaddir . basename($_FILES['mt1']['name']);
 	
 	//echo '<pre>'.$uploadfile;
-	if (move_uploaded_file($_FILES['curri']['tmp_name'], $uploadfile)) {
+	if (move_uploaded_file($_FILES['mt1']['tmp_name'], $uploadfile)) {
+	//	echo "El archivo es válido y fue cargado exitosamente.\n";
+	} else {
+		echo "¡Posible ataque de carga de archivos!\n";
+	}
+	$uploadfile = $uploaddir . basename($_FILES['mt2']['name']);
+	if (move_uploaded_file($_FILES['mt2']['tmp_name'], $uploadfile)) {
+	//	echo "El archivo es válido y fue cargado exitosamente.\n";
+	} else {
+		echo "¡Posible ataque de carga de archivos!\n";
+	}
+	$uploadfile = $uploaddir . basename($_FILES['mt3']['name']);
+	if (move_uploaded_file($_FILES['mt3']['tmp_name'], $uploadfile)) {
+	//	echo "El archivo es válido y fue cargado exitosamente.\n";
+	} else {
+		echo "¡Posible ataque de carga de archivos!\n";
+	}
+	$uploadfile = $uploaddir . basename($_FILES['mt4']['name']);
+	if (move_uploaded_file($_FILES['mt4']['tmp_name'], $uploadfile)) {
 	//	echo "El archivo es válido y fue cargado exitosamente.\n";
 	} else {
 		echo "¡Posible ataque de carga de archivos!\n";
@@ -65,20 +82,25 @@ if (isset ( $_POST ['cedu'] )) {
 			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>
 			<tr><td>Número de Casa:</td><td>' . $numerodecasa . '</td></tr>
 			<tr><td>Número de Celular:</td><td>' . $numerocelular . '</td></tr>
-			<tr><td>Campo Laboral que va a trabajar:</td><td>' . $trabajar . '</td></tr>
-			<tr><td>Fecha de Nacimiento:</td><td>' . $fechan . '</td></tr>
+			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>
+			<tr><td>Modelo de Moto:</td><td>' . $modelodemoto . '</td></tr>
+			<tr><td>Marca de Moto:</td></tr>' . $marcademoto . '</td></tr>
+			<tr><td>Kilometraje:</td></tr>' . $kilometraje . '</td></tr>
+			<tr><td>Color de Moto:</td></tr>' . $colordemoto . '</td></tr>
+			<tr><td>Año de Moto:</td></tr>' . $anomoto . '</td></tr>
 			<tr><td>Presentacion:</td></tr>' . $present . '</td></tr>					
 			</table>';
 	
-	$insertar = "INSERT IGNORE INTO curriculum (nac, ci, gen, pnombre, snombre, papellido, 
-							sapellido, direc, esta, ciud , 
-					email, ncasa, ntlf , trabj, fechan , present, archi) 
-					VALUES ('" . $nacionalidad . "','" . $cedula . "','" . $genero . "','" . $primernombre . "',
-							'" . $segundonombre . "','" . $primerapellido . "','" . $segundoapellido . "', '" . $direccion . "', '" . $estado . "', '". $ciudad ."',
-							'" . $correo . "', '" . $numerodecasa . "','" . $numerocelular . "','" . $trabajar . "','" . $fechan . "','" . $present . "','" . $_FILES['curri']['name'] . "')";
+	$insertar = "INSERT IGNORE INTO motoventa (naci, ci, pnom, pape, direc, esta, ciud , 
+					email, ncas, ntlf , tipomoto, mdmoto, mrmoto, klmoto, clmoto, anomoto ,present, archi1, archi2, archi3, archi4) 
+					VALUES ('" . $nacionalidad . "','" . $cedula . "','" . $primernombre . "',
+							'" . $primerapellido . "', '" . $direccion . "', '" . $estado . "', '". $ciudad ."',
+							'" . $correo . "', '" . $numerodecasa . "','" . $numerocelular . "','" . $tipodemoto . "','" . $modelodemoto . "', '" . $marcademoto . "',
+							'" . $kilometraje . "', '" . $colordemoto . "', '" . $anomoto . "', '" . $present . "','" . $_FILES['mt1']['name'] . "', 
+							'" . $_FILES['mt2']['name'] . "','" . $_FILES['mt3']['name'] . "','" . $_FILES['mt4']['name'] . "')";
 	
 	//echo $insertar;
-	//$conexion = mysql_connect ( 'localhost', 'root', 'za63qj2p' );
+	//$conexion = mysql_connect ( 'localhost', 'root', '' );
 	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
 	if (! $conexion) {
 		echo 'no se pudo conectar';
@@ -86,7 +108,7 @@ if (isset ( $_POST ['cedu'] )) {
 	mysql_select_db ( 'electro4_webelectron', $conexion );
 	//mysql_select_db ( 'webelectron', $conexion );
 	mysql_query ( $insertar );
-	// echo $insertar;
+	//echo $insertar;
 	
 	$md5correo = md5 ( $correo );
 	$tiempo = date ( "Y/m/d" );
@@ -117,7 +139,7 @@ if (isset ( $_POST ['cedu'] )) {
 	$mail->Password = "soporte8759"; // SMTP account password
 	$mail->SetFrom ( 'soporteelectron465@gmail.com', 'Departamento de RRHH' );
 	$mail->AddReplyTo ( 'soporteelectron465@gmail.com', 'Solicitud Curriculum' );
-	$mail->Subject = 'Curriculum Vitae Electron 465';
+	$mail->Subject = 'Departamento de RRHH Electron 465';
 	$cuerpo = '<br>' . $ruta;
 	$mail->AltBody = "Texto Alternativo"; // optional, comment out and test
 	$mail->MsgHTML ( $cuerpo );
