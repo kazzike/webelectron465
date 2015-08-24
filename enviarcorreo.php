@@ -12,7 +12,14 @@
 require_once ("inc/PHPMail/class.phpmailer.php");
 
 if (isset ( $_POST ['mail'] )) {
-	
+	$nom = "";
+	$tel = "";
+	$cel = "";
+	$est = "";
+	$emp = "";
+	$ban = "";
+	$sul = "";
+	$vac = "";
 	$conexion = mysql_connect ( 'localhost', 'electro4_electro', 'p13=3e8lxTTB' );
 	if (! $conexion) {
 		echo 'no se pudo conectar';
@@ -20,7 +27,8 @@ if (isset ( $_POST ['mail'] )) {
 	mysql_select_db ( 'electro4_webelectron', $conexion );
 	
 	
-	$consultar = 'SELECT * FROM validar WHERE correo=\'' . $_POST['mail'] . '\' AND estatus = \'A\'';
+	$consultar = 'SELECT * FROM validar LEFT JOIN afiliacion ON validar.correo=afiliacion.correo 
+					WHERE afiliacion.correo=\'' . $_POST['mail'] . '\' AND estatus = \'A\'';
 	
 	
 	$rs = mysql_query($consultar, $conexion);
@@ -30,8 +38,22 @@ if (isset ( $_POST ['mail'] )) {
 	
 	
 	
-	if($fila > 0)
-	{
+	if($fila > 0){
+		
+		
+		while ($fil = mysql_fetch_object($rs)) {
+			$nom = $fil->pnombre . ' ' . $fil->snombre  . ' ' .  $fil->papellido . ' ' . $fil->sapellido ;
+			$tel = $fil->telefonocasa;
+			$cel = $fil->numerocelular;
+			$est = $fil->estado;
+			$emp = $fil->empresa;
+			$ban = $fil->banco;
+			$sul = $fil->sueldopromedio;
+			$vac = $fil->vacaciones;
+			
+		}
+		//mysql_free_result($resultado);
+		
 		
 		$privatekey = "6Lc4EgMTAAAAANZiORAMganplKlZdreerMw1XIBN";
 		
@@ -43,6 +65,7 @@ if (isset ( $_POST ['mail'] )) {
 		$monto = $_POST ['mont'];
 		$articulo = $_POST ['arti'];
 		$modelo = $_POST ['modelo'];
+		
 		if ($modelo == 'moto') {
 			$asunto = 'Solicitud por: (' . $tipodemoto . ' ' . $cajavelocidades . ')';
 		} elseif ($modelo == 'articulo') {
@@ -53,7 +76,15 @@ if (isset ( $_POST ['mail'] )) {
 		
 		$tabla = '<table>
 			<tr><td>Cédula del Cliente:</td><td>' . $cedula . '</td></tr>
-			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>			
+			<tr><td>Nombre Completo:</td><td>' . $nom . '</td></tr>
+			<tr><td>Telefono Casa:</td><td>' . $tel . '</td></tr>
+			<tr><td>Celular:</td><td>' . $cel . '</td></tr>
+			<tr><td>Estado:</td><td>' . $est . '</td></tr>
+			<tr><td>Empresa:</td><td>' . $emp . '</td></tr>
+			<tr><td>Banco:</td><td>' . $ban . '</td></tr>
+			<tr><td>Sueldo Promedio:</td><td>' . $sul . '</td></tr>
+			<tr><td>Monto Vacaciones:</td><td>' . $vac . '</td></tr>	
+			<tr><td>Código del Vendedor:</td><td>' . $codigovendedor . '</td></tr>				
 			<tr><td>Correo Eléctronico:</td><td>' . $correo . '</td></tr>			
 			<tr><td>Tipo de Moto:</td><td>' . $tipodemoto . '</td></tr>
 			<tr><td>Caja de Velocidades:</td><td>' . $cajavelocidades . '</td></tr>
