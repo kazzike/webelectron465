@@ -21,6 +21,28 @@
 		<![endif]-->
 		<!-- Google Recaptcha -->
 		<link rel="icon" type="image/ico" href="http://www.electron465.com/favicon.ico"/>
+		<script src="dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+		<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript"> 
+		$(document).ready(function(){
+    		swal({   
+    			
+    			title: '<h1>Bienvenido a <span style="color:#E67E22">Electron465<span>.</h1>',   
+    			text: "<h3><b>Estimados Clientes, a partir del lunes 07 de Diciembre del 2015 la empresa estara de vacaciones colectivas hasta el lunes 11 de Enero del 2016, por lo tanto nuestras oficinas permaneceran cerradas.</b></h3>",  
+    			showConfirmButton: true,   
+    			confirmButtonColor: "#E67E22",   
+    			confirmButtonText: "Cerrar!",
+    			html: true
+    		});
+			/*swal({   title: "Error!",   text: "Here's my error message!",   type: "error",   confirmButtonText: "Cool" });
+			swal({
+		title: "HTML <small>Title</small>!",
+		text: 'A custom <span style="color:#F8BB86">html<span> message.',
+		html: true
+	});*/
+    	});
+		</script>
 	</head>
 	<body>
 		<div class="templatemo-top-bar" id="templatemo-top">
